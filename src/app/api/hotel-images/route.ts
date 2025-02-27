@@ -67,3 +67,5 @@ export async function GET(req) {
       { error: "Failed to fetch hotel image", details: error.message },
       { status: 500 }
     );
+  }
+}
