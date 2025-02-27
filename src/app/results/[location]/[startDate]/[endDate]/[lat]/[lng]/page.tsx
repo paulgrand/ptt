@@ -6,7 +6,7 @@ export default async function ResultsPage({ params }) {
   // Ensure params is awaited
   const { location, startDate, endDate, lat, lng } = await params;
 
-  const headersList = headers();
+  const headersList = await headers();
   const host = headersList.get('host') || 'localhost:3000';
   const protocol = process.env.NODE_ENV === 'development' ? 'http' : 'https';
 
