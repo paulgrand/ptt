@@ -1,16 +1,26 @@
 import HotelResult from "@/components/HotelResult";
 import { getDogFriendlyHotels } from '@/utils/csvParser';
+import { headers } from 'next/headers';
 
 export default async function ResultsPage({ params }) {
   // Ensure params is awaited
   const { location, startDate, endDate, lat, lng } = await params;
 
+  const headersList = headers();
+  const host = headersList.get('host') || 'localhost:3000';
+  const protocol = process.env.NODE_ENV === 'development' ? 'http' : 'https';
+
+
   const dogFriendlyHotels = getDogFriendlyHotels();
   
   // Fetch data from your API
+  // const response = await fetch(
+  //   `http://localhost:3000/api/search?location=${location}&lat=${lat}&lng=${lng}&startDate=${startDate}&endDate=${endDate}`,
+  //   { cache: "no-store" } // Avoid caching if necessary
+  // );
   const response = await fetch(
-    `http://localhost:3000/api/search?location=${location}&lat=${lat}&lng=${lng}&startDate=${startDate}&endDate=${endDate}`,
-    { cache: "no-store" } // Avoid caching if necessary
+    `${protocol}://${host}/api/search?location=${location}&lat=${lat}&lng=${lng}&startDate=${startDate}&endDate=${endDate}`,
+    { cache: "no-store" }
   );
 
   if (!response?.ok) {
