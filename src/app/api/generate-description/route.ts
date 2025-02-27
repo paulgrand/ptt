@@ -36,7 +36,7 @@ export async function POST(request: Request) {
       model: "gpt-3.5-turbo",
     });
 
-    console.log('OpenAI API Response:', completion.choices[0].messages);
+    // console.log('OpenAI API Response:', completion.choices[0].messages);
 
     return NextResponse.json({ 
       description: completion.choices[0].message.content 
