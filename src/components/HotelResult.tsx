@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { FaPaw } from 'react-icons/fa'; // Install with: npm install react-icons
+import { FaPaw } from 'react-icons/fa';
+import { FaBuilding } from 'react-icons/fa';
+
 
 const formatHotelName = (name: string): string => {
   const abbreviations = ['me', 'nyc', 'sq', 'uk', 'usa', 'w',];
@@ -32,8 +34,14 @@ const formatHotelName = (name: string): string => {
 
 export default function HotelResult ({ result, location, isDogFriendly, dogFriendlyInfo }) {
   const [imageUrl, setImageUrl] = useState(null);
+  const [imageError, setImageError] = useState(false);
   const [description, setDescription] = useState('');
   const [isLoadingDescription, setIsLoadingDescription] = useState(false);
+
+  // Reset image error when imageUrl changes
+  useEffect(() => {
+    setImageError(false);
+  }, [imageUrl]);
 
   useEffect(() => {
     const fetchHotelImage = async () => {
@@ -78,7 +86,20 @@ export default function HotelResult ({ result, location, isDogFriendly, dogFrien
 
   return (
     <li className="border p-4 rounded shadow hover:shadow-lg flex items-start gap-4 relative">
-    {/* Existing image section */}
+    <div className="w-32 h-32 flex-shrink-0">
+      {imageUrl && !imageError ? (
+        <img 
+          src={imageUrl} 
+          alt={`${formatHotelName(result.name)}`}
+          className="w-full h-full object-cover rounded"
+          onError={() => setImageError(true)}
+        />
+      ) : (
+        <div className="w-full h-full bg-gray-100 rounded flex items-center justify-center">
+          <FaBuilding className="text-gray-400 text-4xl" />
+        </div>
+      )}
+    </div>
     <div className="flex-grow">
       <div className="flex items-start justify-between">
         <h2 className="font-semibold">{formatHotelName(result.name)}</h2>
