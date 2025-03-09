@@ -113,7 +113,7 @@ export default function RootLayout({
               priority
             />
             <h1 className="text-2xl font-medium tracking-tight mt-4 mb-2">  {/* changed from text-3xl to text-2xl and adjusted font-weight */}
-              Phoebe&apos;s Travel Tails
+              Travel Tails
             </h1>
             <p className="text-gray-600 max-w-2xl text-sm leading-relaxed">  {/* added text-sm and leading-relaxed */}
               Researched dog friendly hotels, we call each hotel periodically to determine just how dog-friendly each property is.
