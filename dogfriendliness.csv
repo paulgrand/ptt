@@ -1,6 +1,6 @@
-hotelId,hotelName,city,phone,agent,dogFriendly,weightSizeLimit,maxDogs,dogFee,areasPermitted,areasNotPermitted,allowedInRoomWithoutOwners,dogAmenetiesProvided,walkTypesNearHotel,grassAreaNearHotel,enclosedGarden,dogsAllowedAtBreakfast
-,Cringletie,Peebles Scotland ,(0) 1721 725 750,Leigh Carrick,Y,N/A,3,N/A,"Garden room bar, library bar",Restaurant & Maguire Lounge,Yes,No,28 acres grounds ,Yes-28 aceres,N/A,Y- in garden room or library bar
-,Chewton Glen,Hampshire,01425 282 212,Emma,Y- Treehouses only & 1 year old or above dogs only ,N/A,N/A,£35,Outside in the resturant terrace and in the grounds on a lead. ,All areas of the hotel ,No,?,Beaches ,?,N/A,Outside on the terrace
+Amadeus ID,Hotel Name,City,Phone number,Agent's name,Dog Friendly Yes/No,Weight/size limit (KG),Max # dogs in room,Dog fee (AKA Pet Cleaning fee),Areas dogs are permitted,Areas dogs are NOT permitted,Dogs allowed in room without owners?,"Dog ameneties provided in room (beds, bowls etc.) - any cost?",Walk types nearby,Grass area near hotel entrance,"If standalone property, enclosed/secure garden?",Can they join for breakfast
+YXEDICRI,Cringletie,Peebles Scotland ,(0) 1721 725 750,Leigh Carrick,Y,N/A,3,N/A,"Garden room bar, library bar",Restaurant & Maguire Lounge,Yes,No,28 acres grounds ,Yes-28 aceres,N/A,Y- in garden room or library bar
+WBBOHB07,Chewton Glen,Hampshire,01425 282 212,Emma,Y- Treehouses only & 1 year old or above dogs only ,N/A,N/A,£35,Outside in the resturant terrace and in the grounds on a lead. ,All areas of the hotel ,No,?,Beaches ,?,N/A,Outside on the terrace
 ,The Gallivant,Camber East Sussex,(0) 1797 338 908,Lily ,Y-Garden rooms and one luxury garden room,,,£25,Lounge area and by the bar,The snug,?,Beds,Beaches ,Y ,N/A,In the bar area
 ,The Fish Hotel,Broadway,01386 858000,N/A,Y,Medium Size,2,£30,All but the restuarant,The Hook ,Yes,"Bed, bowl treat toy",Country Walks,Y- Pooch Play area,"Some rooms- Treehouse, Veranda , Hideaway",Yes in the dog friendly area of the Hook
 ,The Lygon Arms,Broadway,01386 852255,Jason,Y ,N,2,£25 per dog,All but the spa and grill room,spa and the grill room,No,Dog bed and bowl,Country Walks,Y,N/A,Y in the Russel Room
@@ -15,9 +15,9 @@ hotelId,hotelName,city,phone,agent,dogFriendly,weightSizeLimit,maxDogs,dogFee,ar
 ,Travelodge Canterbury Chaucer Central,Canterbury,,N/a,Y,N,2,£20 per pet,Specific to each TL but not in Restuarant 'Bar Cafe',Bar Cafe,No,Not typically ,city Centre 0.3 miles to Dane John Gardens ,Y,N/A,Dogs not permitted in resturant 
 ,Travelodge Exeter M5,Exeter,,N/a,Y,N,2,£20 per pet,Specific to each TL but not in Restuarant 'Bar Cafe',Bar Cafe,No,Not typically ,Industrail estate- noise near motorway 0.4 miles to Ludwell Valley Parlk,Y,N/A,Dogs not permitted in resturant 
 ,Travelodge Scarborough St Nicholas,Scarborough ,,N/a,Y,N,2,£20 per pet,Specific to each TL but not in Restuarant 'Bar Cafe',Bar Cafe,No,Not typically ,0.2 miles to Valley Gardens- Beaches near by ,N,N/A,Dogs not permitted in resturant 
-,Travelodge London Chigwell,London,,,Y,N,2,£20 per pet,Specific to each TL but not in Restuarant 'Bar Cafe',Bar Cafe,No,Not typically ,Suburbs 0.5 miles to Hainault Forest Country Park ,N,N/A,Dogs not permitted in resturant 
-,Travelodge London Snaresbrrok ,London,,,Y,N,2,£20 per pet,Specific to each TL but not in Restuarant 'Bar Cafe',Bar Cafe,No,Not typically ,Suburbs 0.3 miles to Epping Forest ,N,N/A,Dogs not permitted in resturant 
-,Travelodge London Ilford,London,,,Y,N,2,£20 per pet,Specific to each TL but not in Restuarant 'Bar Cafe',Bar Cafe,No,Not typically ,Suburbs 0.4 miles to Valentine's park ,N,N/A,Dogs not permitted in resturant 
+TGLON215,Travelodge London Chigwell,London,,,Y,N,2,£20 per pet,Specific to each TL but not in Restuarant 'Bar Cafe',Bar Cafe,No,Not typically ,Suburbs 0.5 miles to Hainault Forest Country Park ,N,N/A,Dogs not permitted in resturant 
+TGLON245,Travelodge London Snaresbrrok ,London,,,Y,N,2,£20 per pet,Specific to each TL but not in Restuarant 'Bar Cafe',Bar Cafe,No,Not typically ,Suburbs 0.3 miles to Epping Forest ,N,N/A,Dogs not permitted in resturant 
+TGTTK724,Travelodge London Ilford,London,,,Y,N,2,£20 per pet,Specific to each TL but not in Restuarant 'Bar Cafe',Bar Cafe,No,Not typically ,Suburbs 0.4 miles to Valentine's park ,N,N/A,Dogs not permitted in resturant 
 ,Travelodge London Walthamstow ,London,,,Y,N,2,£20 per pet,Specific to each TL but not in Restuarant 'Bar Cafe',Bar Cafe,No,Not typically ,City Centre 0.2 miles to Lloyd Park ,N,N/A,Dogs not permitted in resturant 
 ,Travelodge London Edmonton ,London,,,Y,N,2,£20 per pet,Specific to each TL but not in Restuarant 'Bar Cafe',Bar Cafe,No,Not typically ,City Centre 0.3 miles to Valentines Park ,Y,N/A,Dogs not permitted in resturant 
 ,Travellodge London Enfield ,London,,,Y,N,2,£20 per pet,Specific to each TL but not in Restuarant 'Bar Cafe',Bar Cafe,No,Not typically ,Suburbs 0.1 miles to Pymmes Park ,Y- but next to a road,N/A,Dogs not permitted in resturant 
@@ -47,7 +47,7 @@ hotelId,hotelName,city,phone,agent,dogFriendly,weightSizeLimit,maxDogs,dogFee,ar
 ,Malmasion Dundee,Dundee,01382 339715,,Y,Small/ Medium Size,2,£25 per pet or £40 for 2,Bar area & Lobby,all other areas including main resturant ,No,Yes ,Approximately 0.2 miles to Slessor Gardens,Y,N/A,In the bar area
 ,Malmasion Glasgow,Glasgow,0141 378 0383,,Y,Small/ Medium Size,2,£25 per pet or £40 for 2,Bar area & Lobby,Most public areas ,No,Yes ,0.4 miles to Kelvingrove Park,N,N/A,In the bar area
 ,Malmasion Liverpool ,Liverpool,0151 363 3640,,Y,Small/ Medium Size,2,£25 per pet or £40 for 2,Bar area & Lobby,Most public areas ,No,Yes ,0.3 miles to Princes Dock,N,N/A,In the bar area
-,Malmasion London ,London,020 7012 3700,,Y,Small/ Medium Size,2,£25 per pet or £40 for 2,Bar area & Lobby,Most public areas ,No,Yes ,0.3 miles to Finsbury Square Garden,Y,N/A,In the bar area
+GZLONMAL,Malmasion London ,London,020 7012 3700,,Y,Small/ Medium Size,2,£25 per pet or £40 for 2,Bar area & Lobby,Most public areas ,No,Yes ,0.3 miles to Finsbury Square Garden,Y,N/A,In the bar area
 GZMANMAL,Malmasion Manchester ,Manchester ,0161 641 1883,,Y,Small/ Medium Size,2,£25 per pet or £40 for 2,Bar area & Lobby,Most public areas ,No,Yes ,0.4 miles to Ormeau Park,N,N/A,In the bar area
 ,Malmasion Manchester Deans Gate ,Manchester ,0161 509 9160,,Y,Small/ Medium Size,2,£25 per pet or £40 for 2,Bar area & Lobby,Most public areas ,No,Yes ,0.5 miles to Rubislaw Terrace Gardens,N,N/A,In the bar area
 ,Malmasion Newcastle ,Newcastle,0191 389 8627,,Y,Small/ Medium Size,2,£25 per pet or £40 for 2,Bar area & Lobby,Most public areas ,No,Yes ,0.2 miles to Newcastle Quayside,N,N/A,In the bar area
@@ -57,16 +57,297 @@ GZMANMAL,Malmasion Manchester ,Manchester ,0161 641 1883,,Y,Small/ Medium Size,2
 ,Malmasion Cheltenham ,Cheltenham,01242 370655,,Y,Small/ Medium Size,2,£25 per pet or £40 for 2,Bar area & Lobby,Most public areas ,No,Yes ,Approximately 0.1 miles to Montpellier Gardens,Y ,N/A,In the bar area
 ,Innside By Melia Newcastle,Newcastle,0191 338 7710,,Y ,No,2,£30 per dog per night ,Lobby/ Ginos Bar area and lounge  ,all other areas including main resturant ,Yes,Dog bed and bowl,0.3 miles to Riverside Park,Y ,N/A,Ginos Restuarant 
 ,Innside By Melia Manchester ,Manchester ,0161 200 2500,,Y,15kg ,2,£30,All other areas ,Wellness and spa area,No,"Bed, bowl treat toy",0.5 miles to All Saints Park,Y,N/A ,They have their own designated area at the bar within the restaurant to eat their breakfast.
-,Innside By Melia Liverpool ,,,,,,,,,,,,,,,
-,Melia London,,,,,,,,,,,,,,,
-,Melia London,,,,,,,,,,,,,,,
-,Melia London ,,,,,,,,,,,,,,,
+,Innside By Melia Liverpool ,Liverpool,(0)151 832 0960,,Y,15 Kg,2,£30,rooms and lounge area,All other areas including main restaurant apart from at breakfast ,No,"Bed, bowl treat toy",Bixteth Street.,Y,N/a,Lounge or restuarant- lounge recommended 
+,Melia White House ,London,(0)20 7391 3000,,Y,small dogs only,2,£50,Room only,Level Lounge but only after breakfast. The lobby,Yes,bed and a bowl,,N,N/a,No
+,Melia Kensington London,London,,,N,,,,,,,,,,,
+,ME Melia London ,London,44 207 395 3400,,Y,N/a,2,£50 per pet,Information Not Provided ,"Pets cannot access hotel restaurants, gym areas or other areas where food and drink are present.",No,Food and water bowls filled with bottled water and a personalised welcome amenity- In room dinin menu for dog,,,,
 ,Hotel Du Vin Harrogate ,Harrogate ,44 (01423608121,,Y ,No,2,£25 for 1 £40 for 2 per night ,all other areas ,Bistro,No,"dog bed, blanket, a bowl, and a dog pack including treats and a ball",Approximately 0.1 miles to The Stray,Y,N/A,Yes bar and lounge area
 ,Hotel du vin York,York,(0)1904 557350,,Y ,No,2,£25 for 1 £40 for 2 per night ,all other areas ,Bistro,No,No,Backs onto a park,Y,N/A,"Courtyard, Bar, Lounge "
 ,Hotel du vin Glasgow,Glasgow ,0141 3392001,,Y ,No,2,£25 for 1 £40 for 2 per night ,all other areas ,The resturant ,Y,"dog bed, blanket, a bowl, and a dog pack including treats and a ball",Botanic Gardens ,Y,N/A,Bar area
 ,Hotel du vin  Exeter,Exeter ,,,Y ,No,No limit,£25 per dog per night ,All other areas ,Pool & resturant ,Y,"dog bed, blanket, a bowl, and a dog pack including treats and a ball",Bull Meadow Park ,Y,Enclosed hotel gadren,Bar or library 
 ,Hotel du vin Newcastle,Newcastle ,(0) 191 389 86 28,,Y ,Small/Medium,2,£25 for 1 £40 for 2 per night ,"Reception, bar lounge",Resturant ,No,"dog bed, blanket, a bowl, and a dog pack including treats and a ball",,Y,N/a,Lounge Area
 ,Hotel du vin Brighton,Brighton,(0) 1273855221,,Y ,no,2,£25 for 1 £40 for 2 per night ,Bar,All other areas,No,Dog basket & bowl,,Y,N/a,Bar area
-,Hotel du vin  Bristol,Bristol ,,,Y ,No,2,£25 for 1 £40 for 2 per night ,Sugar BAr,All other areas,No,Dog bowl,,Y,N/a,Sugar bar
+,Hotel du vin  Bristol City Centre,Bristol ,,,Y ,No,2,£25 for 1 £40 for 2 per night ,Sugar BAr,All other areas,No,Dog bowl,,Y,N/a,Sugar bar
 ,Hotel du vin Tunbridge Wells,Tunbridge Wells,(0) 1892 320749,,Y ,No,2,£25 for 1 £40 for 2 per night ,"Bar, Terrace, Garden",Bistro & Tea Lounge ,No,"dog bed, blanket, a bowl, and a dog pack including treats and a ball",,Y-Hotel Garden,N/a,Bar/ terrace in summer
 ,Hotel du vin Henley,Oxfordshire,0) 1491877579,,Y ,No,3,£25 per dog per night ,"Bar, Snug, Courtyard and your room - Everywhere apart from the restaurant",Bistro,No,"dog bed, blanket, a bowl, and a dog pack including treats and a ball",,No,N/a,Snug area
+,Hotel du vin Poole ,Poole,(0)1202 785 570,,Y ,Medium sized,2,£25,Everywhere except the bistro,Bistro,No,"bed, bowls and treat bag",Hamworthy park and Baiter Park are both an 18 minute walk away.,Y ,N/A,Bar area
+,Hotel du vin Cambridge,Cambridge ,(0) 1223 928 991,,Y,No,2,£25,Classic rooms & Bar,Restaurant  & other room types ,Yes ,Dog and matt ,"Coe Fen, Parker's piece and midsummer common",No,No,Bar area
+,Hotel du vin Edinburgh,Edinburgh ,0)1312474900,,Y,No,2,£25 for 1 or £40 for 2,"Whisky
+Snug or Bar.",Dinings areas,No,dog bed and a dog bowl,,,No,"Whisky
+Snug or Bar."
+,Hotel du vin Birmingham,Birmingham,(0) 1217943005,,Y,No,2,£25 for 1 or £40 for 2 per night,All other areas ,Bistro,No,"mats, beds, and bowls.",,Y,N/A,Bubble Lounge Bar
+,Hotel du vin Bristol Avon Gorge,Bristol,(0) 1179738955,,Y,No,2,£25 for 1 dog. £40 for 2 dogs,Everywhere except the bistro,Restuarant,No,"Bed , bowl , treats",,Y,N/a,Yes in a seperate area
+,Hotel du vin Chelentham,Cheltenham,,,Y,Small or Medium,2,£25 for 1 or £40 for 2,Most areas,Dining room,No,"provide a bed suitable for a small to medium sized dog, a protective mat, 2 dog bowls and a treat bag that includes ‘poo bags’
+",Countryside/ Town centre,?,N/A,Lounge Area
+,Hotel du vin Wimbledon,London,,,Y,No,2,£25 per dog per day,Room & Lounge Area,Restaurant; Orangery,Y,"bowl,bed,treats,poo bags",Richmond Park,Y,N/A,Lounge Area
+,Hotel du vin Winchester,Winchester ,,,Y,No,2,£25,"Courtyard, Bar, Reception",Bistro,Y,Bed and Bowls,,Y,N/A,Bar
+GZLHRHVH,Hotel du vin Henley On Thames,Oxfordshire,(0) 1491877579,,Y,Small or Medium,2,£25 per room per night for 1 dog or £40 for 2 dogs ,Bar and snug,Bistro,No,"provide a bed suitable for a small to medium sized dog, a protective mat, 2 dog bowls and a treat bag that includes ‘poo bags’
+",,Y,N/A,Bar and Snug
+,Hotel du vin St Andrews,,,,,,,,,,,,,,,
+,Hotel du vin Stratford upon avon,,,,,,,,,,,,,,,
+,Haycock Hotel,Peterborough ,01780 782223,N/A,Y,No,2,£25,In our patio rooms – Classic rooms – the bar and we have a dog friendly part of our brasserie restaurant,Deluxe rooms – Historic rooms – Suites – our Prevost restaurant,If the dog is ok to be left on its own and doesn’t bark and disturb other guests,water bowl and food bowl and a soft blanket bed,,"We do have a garden, but this isn’t fully secure (low walls – gate that’s normally open)",,Dogs are allowed in the breakfast restaurant
+,Gibbon Bridge Hotel,Preston,(0) 1995 61456,N/A,Y,No,2,30,your room and the outside areas of the hotel,"main hotel, bar, lounge, dining room and gardens of the hotel",Yes,No,,Dogs not allowed in the garden of the hotel ,N/A,No
+,Fence Gate Lodge ,Burnley ,01282 509555,N/A,Y ,Our superior doubles are suitable for one to two medium sized dogs and we have one junior suite which again is suitable for one to two medium to large size dogs. All these dog friendly rooms are ground floor.,2,£20 per dog,"reception and all ground floor public areas apart from the breakfast room seperate building the Fence Gate Inn which is a short two minute walk to our bar and restaurant. Dogs are very welcome in the bar area if you would like to dine with us,",Our upper floor is out of bounds for four paws including public areas and rooms and restaurant ,Yes,"this includes dog bed, towel for any muddy paws or for drying off if the weather is damp or raining, dog bowls, dog bonio on arrival and a sausage for breakfast for the dog",,Y ,N/a,Yes 
+,Fishmore Hall Hotel & Boutique Spa,Shropshire,01584 875148,N/a,Y ,No,3,£30,All areas except dining room,dining room,Yes,bowls and towels,,Y ,N/a,Yes in Blue room (same for all meals) 
+,penyvoelhal Llanymynech,Llanymynech Wales,07365 281384,James,Y,No,2,£10,Everywhere,N/A,No,bowls,2 acres of land ,Y ,We have 2 acres of land which is safe and excluded. Dogs are allowed to be in the garden.,Yes if the dog can behave around other guests 
+,"
+Aloft TECA Aberdeen",Aberdeen,,,Y,No,2,£35 per stay,Everywhere,Not near the breakfast buffet,No,"dog beds, bowls, toys and treats all available on request",Field 30 seconds walk away ,Field 30 seconds walk away ,No,Yes in restuarant 
+,Abbey Hotel,Bath,,,Y,No,2,£35 per stay,Everywhere but restuarant and newly refurbed areas, restuarant and newly refurbed areas,No,Bed and Bowls,,N,N/a,Bar area
+,Ac Marriott Belfast ,Belfast ,,,Y,N/A,2,£10.00 per pet per day,"Lobby, outdoor terrace, bar/bar lounge",Novelli’s restaurant due to food safety legislation,No,Yes on request ,There is a public park/walkway along the river behind the hotel/other side of riverbank.,Y ,N/a,Bar area
+,Fitzherbert farmhouse,Swynterton Staffordshire,1782796782,Kelly ,Y ,N/A,2,£15 per dog ,"Bomfim, Madalena and Vesuvio room types only bar & snug area",All other areas,No,"come with pet bed, bowl and a doggy treat bag",,Y ,N/a,Bar/snug area
+,"Town Hall Hotel London, a Member of Design Hotels",London,44 20-78710460,,Y,N/A,2,£25,"Elis Restuarant, Hotel Lobby","Bar, Da Terra Restaurant ",Yes,"Bed, bowls etc",,No,n/a,No
+,Bvlgari Hotel London.,Knightsbridge London,2071511010,,Y,35Kg,1,£100 per stay,Rooms only ,Everywhere else,No,"- a chewing toy, a carrier bag and a water bottle if staying in a room.
+- a chewing toy, a carrier bag, a water bottle, and a blanket if staying in a suite.
+Your pets will also have the option to use a large a bowl and a dog bed in a room and an additional large tent in a suite.",Hyde Park,Y ,N/a,No
+,The Stratford Hotel Autograph Collection,London Stratford,020 3973 0565,,Y,8-10kg,1,£50 per stay,"Rooms, Lounge, Kitchen E20 Terrace ",Everywhere else (restaurant may allow small wellbehaved dogs). ,No,Dog bed,Olympic park? ,No,N/a,K20 terrace if open but would need to check beforehand 
+,Ac Inverness,Inverness,44 1463-211955,,Y,30kg,2,£15 per stay,Left hand side of bar,Right hand side,No,Bowl and bed ,,Y ,N/A,Left hand side of the bar
+,Courtyard Gatwick,London,0)1293 566300,,Y,No limit,2,£25 per stay,Everywhere except the restuarant,Restuarant ,No,No,,No,N/A,Seperate area not the restuarant 
+,Liverpool,Birmingham ,0121 820 6000,,Y,24kg,2,No fee,Lobby Area,Restuarant ,Yes,Beds and Bowls- pre notice required,,Y ,N/A,Lobby area
+,Residence inn Edinburgh,Edinburgh,44 131 229 7150,,y,N/A,2,£10 per night,All areas of hotel - APART from breakfast area between 6:30am-11am,Breakfast area between breakfast serving times,No,No,Edinburgh Meadows,Y ,N/A,No
+,University Arms Cambridge,Cambridge,01223 60 60 66,,Y,20kg,2,£35 per night,Reserved Room & Library,On furniture and resturant and bar ,Yes,No but treats at reception,Parker's Piece ,Y ,N/A,No
+,Moxy Aberdeen Aiport,Aberdeen,(+44) 1224 545095,,Y,N/a,N/A,£15 per stay, downstairs lobby,All other areas,Yes,No,,Y ,N/a,Lobby area
+,Moxy London ExCel,London,(0) 2070 31 1683,,Y,N/a,N/A,£15 per day,Lobby area,Restuarant/ Kitchen & Breakfast area ,Yes,No,,Y ,N/a,No- can take breakfast to the room or leave dog in the room 
+,Moxy Milton Keynes,Milton Keynes,(0)1908106288,,Y,Small/ Medium,2,£15 per stay,everywhere,N/A,No,No- but dog menu avaialble ,Campbell Park,Y ,N/a,Yes in the breakfast area but dogs are not allowed at the buffet
+,Moxy Plymouth,Plymouth,01752 422237,,Y,N/A,2,£15 per night,Everyhwere,N/a,Yes,No,,N,No,Yes 
+,AC Salford Quays,Manchester,,,Y,N/A,2,£25 per pet per night,AC Library,All other areas where food and beverages are consumed including the Restaurant ,No,Dog Bed,City Centre,Y ,N/A,Reception Area or terrace
+,St Ermin's Hotel,Westminester London,(0) 207 222 7888,,Y,N/A,1,Free,Common areas on a lead. ,Caxton Restaurant and the bar,Yes ,Dog Bed,,Y- Hotel can also recommend ,N/A,No
+,Delta Warkwick,Warkwick,,,N- currenlty closed to new clients,,,,,,,,,,,
+,Bankside Hotel,London,(0) 203 9432200,,Y,N/A,2,£75,Everywhere else,Gym,No,Yes dog ammenties offered,,Y,N/A,Yes- ask the team they will find you a relaxed tooked away spot 
+,Aloft Excel,London,,,Y,18Kg,1,£0,Bar Area and common areas,Resturant and pool/spa aras,No,No,,Y,N/A,Bar area
+,St Pancras Renaissance ,London,,,Y,10kg,2,£50,Everywhere on a lead,N/A,No,Yes- pre request required,Regent Park and Granary Square,N,N/a,Restuarant 
+,Shertaon Park Lane,London,,,Y,N/a,1 medium - large or 2 small,£25 per night,"Smith and Whistle Bar, Reception & Lobby","Other F&B outlets inlcuding club lounge, Mercante Restaurant and Palm Court",No,Yes,Green Park,Y,N.A,No
+,Montcalm,London,,,Y,35 Kg,1,£35 per night,Designated areas of the restaurant and cafe & common areas,All other areas,Yes,Beds,,N,N/A,Yes in designated areas  of cafe and restaurant 
+,Delta Colchester,Colchester,,,Y,20kg,1,£40,Bar and Lounge Area,All other areas including the main restuarant,No,Bed and bowl,,Y,N/A,Bar and lounge 
+,Residence Inn by Marriott London Kensington,London,,,Y,22kg,2,£50,Most other areas of the hotel minus the breakfast area ,Breakfast area,Yes,"£50, which includes a dog bed, bowls, and other essentials for your pets","Holland Park, located just a 20-minute walk away",Y,N/A,No
+,The Dixon,London,,,Y,34kg,1,£35 per night,public areas and designated areas of the restaurant (Table 55 and the Café section,N/A,Yes,"complimentary pet beds, food and water dishes",London Bridge Area ? ,No,N/A,designated areas of the restaurant (Table 55 and the Café section
+,Portsmouth Marriott Hotel,Portmouth,,,Y,10kg ,2,£45 per room,All areas on a lead,N/a,No,No,,Y,Yes but not for toileting ,Yes in designated areas  of restaurant 
+,Delta Marriott Bexleyheath Hotel,BexleyHeath,,,N,,,,,,,,,,,
+,Marriott Royal Hall Bristol,Bristol,,,N,,,,,,,,,,,
+,Moxy Slough,Slough London,,,Y,N/A,2,non-refundable £50.00 and a £10.00 per night cleaning fee,All public areas,Gym,No,Yes prerequest required,Salt Hill Park which is just over 10 minutes walk,Y,N/A,Yes
+,Residence Inn Slough,London,,,Y,N/A,2,non-refundable £50.00 and a £10.00 per night cleaning fee,All public areas,Gym,No,Yes prerequest required,Salt Hill Park which is just over 10 minutes walk,Y,N/A,Yes
+,Bournemouth Highcliff Marriott Hotel,Bournemouth,(0) 1202 557702,,Y,N/A,2,£45,Bar,Restuarant and Lobby area,No,No,,Y,N/a,Bar Area
+,COURTYARD EDINBURGH WEST,Edinburgh,0131 526 3210,,Y,Medium size,2,£25 per room,"Public lobby, outside terrace",Restaurant ,Yes,No,,Y,N/a,Lobby Area 
+,Moxy Belfast,Belfast ,,,N- Not open Yet ,,,,,,,,,,,
+,Delta Hotels by Marriott Breadsall Priory Country Club,,,,N,,,,,,,,,,,
+,Cardiff Marriott,,,,N,,,,,,,,,,,
+,COURTYARD BY MARRIOTT OXFORD SOUTH,,,,N,,,,,,,,,,,
+,Delta Hotels Marriott Edinburgh,Edinburgh,,,Y,N/a,2,£10 per pet + £50 secruity deposit,almost everywhere except the leisure club and the cast iron grill,the leisure club and the cast iron grill,Yes,No,,Y,N/A, Potentially in Brew Bar but not confirmed
+,Westin London City,London,,,Y,N/A,1,£50 refundable deposit,"Lobby, Reception & in the room","Restaurants, Bar, Spa & Meeting rooms",Yes,Bed,Thames River walk ,Y,,No
+,Delta Hotel Marriott Huntingdon,,,,N,,,,,,,,,,,
+,W Edinburgh,Edinburgh,,,N,,,,,,,,,,,
+,Courtyard Exeter Sandy Park,Exeter,,,N,,,,,,,,,,,
+,EDINBURGH MARRIOTT HOTEL HOLYROOD,Edinburgh,,,N,,,,,,,,,,,
+,Delta Hotels by Marriott Durham Royal County,Durham,0191 386 6821,,Y,No ,1,£30,"Lobby area and Terrace
+",Main bar and restaurant,Y,No,Riverside,Closest is the river side,No,No
+,Delta Hotels by Marriott Manchester Airport,,,,N,,,,,,,,,,,
+,Moxy Plymouh,Plymouth,01752 422237,,Y,N/A,2,£15 per night,All areas,N/A,Yes,No,,?,,
+,Moxy Southhampon,Southhampton,,,Y,35kgs,1,£15 per night,All areas,N/a,Yes,No- but dog menu available,,Y,N/A,Yes
+,Moxy York,York,,,Y,N/A,2,£15 per stay,All areas,N/A,Yes- if well behaved and preapproved,No but working on dog packages to be annoucefd shortly,Riverside/city centre,Y,N/A,Yes
+,REACH AT PICCADILLY,Manchester,1613830033,,Y,2 Medium size or 1large,2,£30 per dog per stay,All areas but the leisure facilities,Gym,Yes,Dog bowls and beds pre request required ,City Centre,N,N/a,Yes
+,Moxy Bristol,Bristol,0117 244 0228,,Y,15kg,1,£15 per night,All areas,N/A,No,No,,N,N/A,Dining Area
+,Moxy Aberdeen Airport*,,01224 545095,,Y,,,,,,,,,,,
+,AC Inverness,,44 1463-211955,,Y,35kg,1,£15 per night,Certain areas of the lounge/ restuarant and all rooms,All other areas,Yes,Add on package available,,Y,,In certain area of lounge and restuarant. 
+,Moxy Edinburgh Fountainbridge,,,,Y,N/A,N/A,£15 per stay,All areas,N/A,Yes,No,,Y,N/A,Yes
+,Moxy Edinburgh Airport,Edinburgh,0131 608 1172,,Y,N/a,1,£15 per night ,All areas,N/A,Yes,No,,Y,,Yes 
+,Moxy Glasgow Merchant City,Glasdow,0141 846 0256,,Y,40kg max,1,£15 per stay,All areas,N/A,No,No,,Y,,Yes
+,Moxy Glasgow SEC,Glasgow,0141 406 0727,,Y,N/A,1,£15 per night,All areas,Food area at breakfast,No,No,,Y,,"Yes (at table only, not in food area)"
+,Courtyard SEC,Glasgow,0141 473 8748,,Y,N/a,2,£15 per stay,Lobby area,Restuarnt,Yes,?,,Y,N/A,Yes near the restaurant not in it
+,Moxy Chester,Chester,,,Y,25kg (total weight) ,2,£15 per stay,Everywhere,No where,Yes,offer dog friendly packages which include treats and toy,Canal Walks,Y,N/A,Y
+,Manchester Marriott Hotel Picadilly,,,,N,,,,,,,,,,,
+,Residence Inn Manchester Piccadilly,,0161 8417800,,Y,30kg,2,£20 per night,Ground floor/ first floor room and courtyard,Dining areas and breakfast set up,Yes,No,Canal Walks,Y,N/A,In the lobby and reception area only
+,W London,London,(0) 20 7758 1000,,Y,20kg,£2,£50 per stay,"The ground-floor lobby, First-floor welcome desk Area, Guestroom corridors, and respective guestrooms",pets are not allowed in food and beverage areas,no,"Welcome Amenity Box
+- Pet Towel
+- Personalized engraved W pet tag
+- Rope toy
+- Clean up bags
+- Training pads
+- Dog Treats 
+- Along with a welcome card
+
+In the room
+- Pet Bed
+- Feeding Matt
+- Food and Water bowl",St James Park- 15 mins away,St James Park- 15 mins away,N/A,Breakfast in the room
+,Delta Hotels by Marriott St. Pierre Country Club ,Chepstow,01291 625 261 ,,Y,N/A,£2,£50 per stay,In rooms only- not inside the building In the St Pierre Village are dog friendly rooms only,All areas,No,No,,Y,N/A,Room service only
+,COURTYARD BY MARRIOTT KEELE STAFFORDSHIRE,Keele,(0) 1782 376820,,Y,N/A,£1,£20 per stay,All public areas apart from resturant,Scholars Restuarant,Yes for short periods,Bowsl but no beds,,Y,N/A,They will set up an area if pre requested
+,Aloft Liverpool,Liverpool,0151 294 4055,,Y,18kg,1,N/A,Bar area and lobby,NYL Resturant,No,Yes,,N,N/A,In WXYZ Bar
+,Delta/QHotels Cheltenham,Cheltenham,,,Y,Small- Medium,2,£25 per night,Lounge & terrace,Main Restuarant,?,No,Nature Trails,Y,N/A,Lounge Area
+,Delta By Marriott Notingham Belfry,Nottingham,,,Y,Small- Medium,2,£25 per night,"Reception, lounge and business lounge",Main Restuarant,?,No,Indutrail Estate,Y,N/A,Lounge Area
+,Residence Inn Aberdeen,Aberdeen,,,Y,N/a,2,£25,All areas apart from at food serving times,Resturants at food serving times,Yes,Water bowls,,Y,N/A,No- can take food to the room
+,Moxy Birmingham NEC,Birmingham,,,,,,,,,,,,,,
+,Inhabit Southwick ,London,,,Y,12kg,1,£15 per night,Lounge,Most areas,No,Yes,,,,Yes 
+,Inhabit Queens Gardens,London,,,Y,11kg,1,£15 per stay,All Aras,N/A,Yes,Dog Bed,,Yes,,Yes 
+,Sheraton Heathrow,London,(0) 208 759 2424,,Y,N/A,2,£25 per stay,Rooms and Lobby,F&B areas,No,No,,Yes,N/a,Not stated but in lobby ideally
+,London Heathrow Moxy,London,02033 188  100,,Y,N/a,2,£15 per dog,All public areas,Breakfast serving area,Y,Yes,,Yes,N/a,Yes 
+,Courtyard Marriott Inverness,Inverness,01463 423111,,,,,,,,,,,,,
+,AC Hotel Glasgow,Glasgow,,,N,,,,,,,,,,,
+,Moxy Stratford,London,,,,,,,,,,,,,,
+,Regent Park Marriott,London,,,,,,,,,,,,,,
+,Great Nothern Hotel,London,,,Y,20kg,2,£50 per stay,"Pets are permitted in the hotel bedrooms, the hotel’s Lounge area located on the
+1
+st floor as well as in the GNH Bar located on the ground floor.",RAILS Restaurant and Little Bar.,No,Yes bowls and mat,REGENT'S CANAL RAMBLE (3.3 MILES) URBAN EXPLORER (1.3 MILES): WATERSIDE WANDER (1.8 MILES):,Y Granary Square,N/A,In room or bar area
+,Residence inn Tower Bridge,London,,,,,,,,,,,,,,
+,Residence Inn London Bridge,London,,,,,,,,,,,,,,
+,Courtyard Luton Airport,Luton,01582 218555,,Y,N/A,2,£20 per stay per pet,Lobby,Restuarant,No,No,,Y,N/A,In the lobby
+,Moxy Manchester,Manchester ,,,,,,,,,,,,,,
+,Delta Milton Keynes,Milton Keynes,01908 69 44 33,,Y,N/A,2,£15 per dog,"Lounge Area, Garden, rooms",Restuarnat,No,No,,Y,N/A,In the lounge
+,Delta Birmingham,Birmingham,,,,,,,,,,,,,,
+,Four Points By Sheraton Edinburgh,Edinburgh,0) 7519 363 192,,Y,N/A,2,£25 per pet per night,"3x guest rooms, lobby and lounge",Restuarant,No,Doggy welcome pack and bowls,City Centre,Y,N/A,Lounge area
+,Grovesnor House JW Marriott,London,,,,,,,,,,,,,,
+,DoubleTree by Hilton London Elstree,Rochdale,01706 801 800,,Y,N/A,2,£25 per stay,"All areas apart from  gym, bar and resturant ","gym, bar and resturant ",Yes,"Yes first come, first served basis",,Y,N/A,"Dogs are not allowed in the main breakfast area, but we do have a designated area downstairs where you can enjoy breakfast with your pets."
+,Hilton East Midland Airport,East Midlands,,,Y,N/A,2,£25 per stay,All areas but food and bervage areas,Food and bervage areas & Health club,No,Y ,Elvvaston Castle and Country Park and Bradgate Park ,Y ,N/a,In the lobby or room service
+,Hampton by Hilton Corby/Kettering,Corby,01536 211001,,Y,68kg,2,£20 per stay,Guest rooms and lobby area,Breakfast/dining area,No,Dog bowls and treats,,Y,N/A,Lobby area
+,Foxhill Manor,Farcombe Broadway,01386 854200,,Y,Medium Sized (Lab) ,2,£30 per dog,Bar and lounges,Spa and restuarant ,Y,Beds and bowls,Country Estate Walks,Y,N/A,Yes in a serpeate area
+,Dormy House,Broadway,01386 852711,,Y,Medium Sized (Lab) ,2,£30 per dog,Bar and lounges,Spa and restuarant ,Y,Beds and bowls,Country Estate Walks,Y,N/A,Yes in a serpeate area
+,Hilton Puckrup Hall and Golf Club,Twekesbury,44 1684 296200,,Y,N/a,2,£30 per stay,Bar and lounges,Restaurant areas,No,Blankets for £20,Situated on a golf course,Y,N/A,Bar/ lobby area
+,Hampton by Hilton London Luton Airport,London,(0) 1582 798477,,Y,Combined weight of 34kg,2,£40 per stay,All other areas,Food and bevarage areas,Yes,No,,N,N/a,In the lobby area
+,Bike and Boot Scarborough,Scarborough,,,Y,No,2,£15 per pet per night ,All Areas,N/A,No,"Toy, treat/ bowl ",Beaches ,Y,N/A,Yes
+,Bike and Boot Peak District,Peak District,,,Y,No,2,£15 per pet per night ,All Areas,N/A,No,"Toy, treat/ bowl ",,Y,N/A,Yes 
+,The Bridge Hotel and Spa,Whetherby,,,Y,No,2,£30 per pet,All other areas,Restuarant,No,"Towels, bowls and treats on arrival and throughout the stay at the entrance",Country Walks,Y,Y,Yes in bar or lobby
+,Hilton Garden Inn Doncaster Racecourse,Doncaster,,,Y,35kgs,1 large or 2 small,£10 for the first night £5 for each night after that,reception area and bar area on tiled area only not on the carpeted area,Restuarant,No,No,Town Fields Park,Y,N/A,Yes in the tiled area
+,Hotel Rothaymanor,Ambleside The Lakes,015394 33605,,Y,No wieght limit but two large dogs would make the room tight on space,2,£30 per dog per stay,"Lounge & bar, dog friendly restaurant and dog rooms","main dining restaurant, and rooms that are not dog friendly.",Yes,Yes at request including bed and dressing gown,Lake District,Y,Yes,Yes in the dog friendly area of the dining room
+,Doubletree By Hilton Edinburgh Airport,Edinburgh,0131 519 4400,,Y,35kgs,2,£25 per stay,All other areas,"health club, pool areas and restaurant.",Not ideally but with permission yes,No,,Y,N/A,No 
+,Greywalls Hotel,Windemere the Lakes,01620 842144,,Y,N/A,2,£20 per dog per stay,Not allowed in public areas,Bedroom only,Yes in a crate,Bed and Bowl,Estate/ Lakes Walks,Y,Y Estate grounds,No 
+,DoubleTree by Hilton Cheltenham-Cotswolds,Cheltenham,01242 229292,,Y,N/A,2,£15 per dog per night,Lilley Brook Bar,Lakeside Restuarnt,No,No,Cotswolds,Y,N/A,In the bar area
+,Hampton By Hilton Humberside,Hull,01652 413112,,Y,34kg,2,£15 per dog,All areas expect Touchdown Restuarnant ,Touchdown Restuarant ,Yes,No,,Y,N/A,Y- They also provide sausages for them 
+,DoubleTree by Hilton Coventry,Coventry,02476 603000,,Y,N/A,2,£20 per pet ,Loung and conservatory area,Restuarant and bar area,No- or for very short periods of time only,No,,Y,N/a,Lounge or conservatory
+,Hampton by Hilton Blackpool,Blackpool,(0) 1253922540,,Y,34kg total weight,2,£25 per night per dog,Resturant,Breakfast serving area,No,Bowls and beds,Beaches,Y,N/A,Yes 
+,Hampton by Hilton Belfast City Centre.,,,,N,,,,,,,,,,,
+,DoubleTree by Hilton Sheffield Park,Sheffield,(0)114 2829988,,Y,1 large or 2 small,2,£20 per stay,Lobby/ Recpetion Area,"Restuarant, Lounge/Spa",No,No,,Y,Y,Yes in lobby
+,DOUBLETREE BY HILTON MANCHESTER AIRPORT,Manchestser ,(0) 161 435 3046,,Y,N/A,2,£30 per stay,Bar/Lobby,Restaurant,No,No,,Y,N/a,Bar/Lobby
+,Hilton Garden Inn Stoke on Trent,Stoke on Trent,01782 486960,,Y,N/A,2,£20 per stay,Lobby/ Recpetion Area,Restaurant,Yes,Yes,,Y,,Lobby or room 
+,Hampton by Hilton Liverpool City Centre,Liverpool,0151 702 6250,,Y,50kg,1,£30 per stay,Recpetion area/ Rooms,Breakfast  Area,No,No,City Centre,N,N/A,Lounge area
+,HILTON LIVERPOOL CITY CENTRE,Liverpool,44 151 708 4200,,Y,N/a,2,£30 per stay,Other areas,Restuarant and executive lounge,No,Yes at an additional £30 ,City Centre,N,N/A,No
+,DoubleTree by Hilton Swindon,Swindon,(0)1793 881 777,,Y,40 kg per dog,2,£20 per stay,Lobby and Bedroom,Restuarant,Yes,Bed and bowls,,Y,N/A,No
+,The Randolph Hotel by Graduate Hotel,Oxford,44 344 879 9132,,Y,Medium size,2,£40 per dog per night,Morse bar and Drawing room,Restuarant,No,Beds and bowls,Local Park,Y,N/A,Room service only 
+,Hilton London Metropole,London,(0) 207 402 4141,,Y,34kg,,£35 per stay,Bow Bar and Tyburn Market,"Tyburn Kitchen & Tyburn Bar, Executive Lounge, Drawing Room",No,No,,N,N/A,No
+,Dukes London,London,,,Temp closed for refurbs check back 2025 autumn,,,,,,,,,,,
+,Homewood Hotel and Spa,Bath,(0)1225 580439,,Y,N/A,2,£35 per dog per night,All areas except spa and main restaurant,Spa and main restuarnt,Yes,Woof Welcome box including a treat and toy plus dog bed and bowl,Hotel grounds + Dog agility course,Y,N/A,Conservatory offers all meals with dog and owners. 
+,The Retreat at Elcot Park Hotel,Newbery,01635 800520,,Y,No extra large dogs,2,£30 per dog per night,Everywhere but the spa,Spa,Yes,"Dog bowl, beds and toy",Ample hotel grounds,Y,N/A,Yes section for dogs and owners
+,Hilton London Watford,London,(0)1923 235881,,Y,N/A,2,£35 per dog per night,Bedrooms and lobby,"Restaurant, Bar, Gym",Yes,No,Local Field,Y,N/A,No
+,Tylney Hall Hotel and Gardens,Hook Hampshire,01256 764881,,Y,N/A but would recommend bigger room catergory for 2 big dogs,2,£25 per dog per night,"Garden, courtyard, terrace  Classic rooms within the Courtyard or our Superior Classic rooms and above in the Gardens",Mansion house-Restaurant and Lounge/ pools,Yes,Beds and treats,,Y,N/A,Room service only 
+,HILTON CAMBRIDGE CITY CENTRE,Cambridge,(0)1223 464 491,,Y,30kg,2,£40 per stay,All other areas such as piano bar,"Restaurant, Executive lounge, Fitness Centre and Conference Areas",Yes if reception are informed ,Pet bed and bowl,Parker's Piece,Y- 5 mins away,N/A,Yes in Piano Bar
+,Nomad London,London,(0)1223 464 491,,Y,No set limit depends on room size and type of dog-contact the hotel ,No set limit depends on room size and type of dog-contact the hotel ,£50 per dog,"Your room, The Lobby and The Library",The NoMad Restaurant and The Side Hustle Bar,Yes,Bed bowls and treats,Dury Lane Gardens,Y,N/A,Library 
+,Hampton by Hilton Bristol Airport,Bristol,44 1275 405 966,,Y,Medium Sized,2,£20 per room,All other areas,Breakfast room and main area,Yes,Bed bowls and treats,,Y,N/A,No
+,Hilton Garden Inn Abingdon,Oxfordshire,44 1235 425570,,Y,Small/Medium sized,2,£20 per pet per night,"Groundfloor bedrooms, the lobby and pre resturant area",The main resaurant,No,Bed bowls ,,Y,N/A,Yes in pre resturant area
+,FLEMINGS MAYFAIR HOTEL,London,(0)20 7499 0000,,Y,Case by Case basis please contact the hotel,Case by Case basis please contact the hotel,£50 per night,Dogs are permitted in your guest room and while transitioning directly to outdoor areas.,"dogs are not allowed in dining areas, function rooms, or any recreational areas serving food.",No,Bed and bowls,,Y,,Pre arrangements can be made for this
+,DoubleTree by Hilton London Elstree,London,0208 214 9988,,Y,45kg,2,£35 per dog,Everywhere else,"Restaurant, toilets and meeting rooms",No,"Bed,bowl and dog treat",,N,N/A,No
+,DoubleTree by Hilton Harrogate Majestic Hotel & Spa,Harrogate,01423 700 300,,Y,45kg,2,£30 per dog,"Grederick's Lounge, terrace, garden and lobby",All other areas including the restuarant and spa,No,No,Town Centre,Y- Hotel grounds,N/A,In Fredrick's Bar
+,Grove of Narberth,Narberth,01834 860915,,Y,2 large or 3 small,2 large or 3 small- happy to discuss based on room types,£30 per night,Artisan Room called the snug & dog friendly lounge area,"Main hotel rooms lounge and bar, and Fernery ",Yes,"Treats, bed, bowl and toys and dog menu available on request",Hotel Grounds,Y- Hotel grounds,"Each of our dog rooms are situated outside the main house, accept our House Signature Bramble, where the main entrance is accessed through the main hotel. Each dog room has a separate private garden, however these are not completely enclosed",Artisan Rooms
+,"ELMBANK YORK, TAPESTRY COLLECTION BY HILTON",York,01904 610653,,Y,25kg,2,£30 per dog per night,Public Areas other than the resturant ilncuidng bar and lounge,Restuarant,Ideally No but speak to reception if required,Bowls,City Centre,Y,N/A,Bar or lounge area
+,The Gantry London Curio Collection by Hilton,London,,,Y,Combined weight of 34kg,2,£25 for 7 nights,Dogs are allowed in the main restaurant and breakfast in quiet periods,N/A,Yes- only if owners are on the premisis,Bed and bowls,,Y,N/A,In restaurant at quieters times 
+,HILTON LONDON WEMBLEY,London,(0)208 150 8090,,Y,35kg each,2,,,"Health club, pool areas dining and bereravge areas ",No.,Bowl bed and blanket,,Y,,
+,Hilton Bournmouth,Bournmouthh,(0) 1202 200 521,,Y,34kg combined,2,£50 per stay,All other areas,Restuarant and all food areas,No,Dog bed and treats if pre notified,Beach and Bournemouth Gardens,Y,N/A,Room service only 
+,The Caledonian ,Edinburgh,,,Y,35kg each,2,£50 per pet per stay,,"Restuarant, Health Club, Pool areas, louges and bervage areas",No,,,Y,,
+,Conrad London St James,London,,,Y,15kg,2,£50 per stay,"Lobby, Cocktail bar and Blue boar Pub","Executive Lounge, Pem Restuarant",No,"Bowl, sleeping mat and toy",St Jame's Park,Y,N/A,Orchard Room
+,DoubleTree by Hilton London ExCeL,London,,,Y,35kg ,1,£35 per stay,Rooms only,"Restuarant, Health Club, Pool areas, louges and bervage areas",No,,,Y,,Room service only 
+,Hampton By Hilton Torquay,Torquay,,,Y,N/A,2,£50 covers for up to 5 nights,All areas apart from at breakfast time,Breakfast buffet and on hotel beds,No,Blanket and bowls,,No,N/A,Yes in designated area
+,Ashdown Park hotel,Sussex,,,Y,N/A,2,£15 per night,"ground floor Fairway Junior Suites room type only, Front Hall and West Lounge",All other areas inlcuding the main hotel,Yes,Bed and bowl,Ashdown Forest,Y,N/A,No
+,DoubleTree by Hilton Brighton Metropole,Brighton,,,Y,35kg,2,£45 per stay,Room & Bar Terrace,Restaurant and leisure facilitities,Yes ,No,,Y,N/A,Bar Terrace only 
+,DOUBLETREE BY HILTON LONDON - KINGSTON UPON THAMES,London,,,Y,20kg (However website states 34kg size large so worth checking ,2,£10 per stay,Lobby & Room,Bar & Restuarant,Yes,Bowl,Canbury Gardens Park,Canbury Gardens Park 2 mins away,N/A,Lobby Area
+,Hampton By Hilton Exeter Airport,,,,Not open Yet ,,,,,,,,,,,
+,The Franklin ,London,,,Y,Medium sized,1,£40 per night,,Dining and public areas,No,,,,,
+,The Isle of Eriska Hotel,"Benderloch, Oban ",,,Y,N/A,2,£20 per night per dog,Guest Rooms/ or Self catering accomodation,Public Areas,Yes in a crate,Towels,Private Island,Y,No,No
+,Hilton Gatwick,London,,,Y,Medium sized,2,£30 per stay,Room and Lobby,Restaurants and bar,Yes,No,,Y,N/A,Yes
+,Hilton Aberdeen TECA,Aberdeen,,,Y,N/A,2,£35 per stay,Bar Area,"Restaurants, spa, executive lounge and conference areas",No,,,Y,,Bar Area
+,The Mitre Hampton Court Hotel,London ,,,Y,No extra large breeds,2,£30 per dog per night,Lower Deck of Resturant and Courtyard Bedrooms,Upper deck of restaurant and any bedroom types that are not courtyard,Yes,"Bed, treats and bowl",,Y,,Yes
+,DoubleTree by Hilton Woking,Woking,,,N,,,,,,,,,,,
+,The Grand Hotel Eastbourne,Eastbourne East Sussex,,,Y,N/A,2,£20 per dog per day,Room and walkways to rooms only,ANywhere else that is public,Yes,Bed and bowl and a meal from room service,,Y,,Room service only 
+,Inverlochy Castle Hotel,"Torlundy, Fort William",,,Y,N/A,2,£20 per dog per day,Bedrooms Only,ANywhere else that is public,Yes in a crate,Bed and Bowl,Hotel on large Estate,Y,N/A,No
+,BishopStrow,Wilshire,,,Y,2 large,2,£40 from April 2025,All areas other than stated ,"Garden Grill Restaurant. Cosy Rooms and Luxury Hot tub suite, Spa",Y,"Bed, bowls and woof box",30 acre estate and dog agility course,Y,N/A,Conseratory and lounge 
+,Blossom Lodge Norfolk,Norfolk,,,Y,N/A,N/A,?,All aras,N/A,Y,Blankets and bowls,countryside walks and next to Norfolks largest dog park,Y,Y,N/A
+,DoubleTree by Hilton London - Tower of London,London,,,Y,35kg,2,£40 per stay,Rooms only,Breakfast area and public areas,N,Beds and bowls,Grenwich Park,Y,,No
+,DoubleTree by Hilton Southampton,Southhampton,,,Y,34kg combined weight,2,£10 per pet per night (max £50 per stay),public areas & Bar,Food and beverage areas,N,N,,Y,,In Bar Area
+,Seaham Hall ,Durham,,,Y,Medium Dogs,2,,"Dog Friendly Garden Room with hottub, longue, garden areas, lobby","Furniture, other room types and other public areas not listed (Dining Room, Spa) ",Y in a crate,Towels ,Beaches/ Clifftop & Hotel Grounds,Y,,Not specifically but potentially in the lobby or bar if requested
+,Trigony Hall,"Dumfries and Galloway, Scotland",,,Y,Depends on room size and size of dog. Please call first ,2- but could be 3 if small breeds,£15 per night but every dog that stays get their 5th stay free,All areas,N/A,Y if in hotel,"Welcome Pack and Walk Map/ Washing facilities, beds and bowls ",Countryside- Hotel provide maps,Y,,Y- Dog menu at breakfast
+,Leman Locke  London,London ,,,Y,30kg and under,1,£40 per stay,Studio Apartment Hotel so in the studios ,Each hotel has a dedicated work space and pet oweners must call in advance to see where they are allowed and when ,,"lovely doggie treats,  a dog bandana and toy, plus a dog bowl and door hanger",,,,Studio Apartment Hotel so in the studios 
+,Bermonds Locke London TowerBridge,London,,,Y,30kg and under,1,£40 per stay,Studio Apartment Hotel so in the studios ,Each hotel has a dedicated work space and pet oweners must call in advance to see where they are allowed and when ,,"lovely doggie treats,  a dog bandana and toy, plus a dog bowl and door hanger",,,,Studio Apartment Hotel so in the studios 
+,Turing Locke Cambridge,Cambridge,,,Y,30kg and under,1,£40 per stay,Studio Apartment Hotel so in the studios ,Each hotel has a dedicated work space and pet oweners must call in advance to see where they are allowed and when ,,"lovely doggie treats,  a dog bandana and toy, plus a dog bowl and door hanger",,,,Studio Apartment Hotel so in the studios 
+,Eden Locke Edinburgh,Edinburgh,,,Y,30kg and under,1,£40 per stay,Studio Apartment Hotel so in the studios ,Each hotel has a dedicated work space and pet oweners must call in advance to see where they are allowed and when ,,"lovely doggie treats,  a dog bandana and toy, plus a dog bowl and door hanger",,,,Studio Apartment Hotel so in the studios 
+,Kingsland Locke London,London,,,Y,30kg and under,1,£40 per stay,Studio Apartment Hotel so in the studios ,Each hotel has a dedicated work space and pet oweners must call in advance to see where they are allowed and when ,,"lovely doggie treats,  a dog bandana and toy, plus a dog bowl and door hanger",,,,Studio Apartment Hotel so in the studios 
+,Locke at Brocken Wharf,London ,,,Y,30kg and under,1,£40 per stay,Studio Apartment Hotel so in the studios ,Each hotel has a dedicated work space and pet oweners must call in advance to see where they are allowed and when ,,"lovely doggie treats,  a dog bandana and toy, plus a dog bowl and door hanger",,,,Studio Apartment Hotel so in the studios 
+,Buckle Street Studios by Locke,London,,,Y,30kg and under,1,£40 per stay,Studio Apartment Hotel so in the studios ,Each hotel has a dedicated work space and pet oweners must call in advance to see where they are allowed and when ,,"lovely doggie treats,  a dog bandana and toy, plus a dog bowl and door hanger",,,,Studio Apartment Hotel so in the studios 
+,Whitworth Locke,Manchester,,,Y,30kg and under,1,£40 per stay,Studio Apartment Hotel so in the studios ,Each hotel has a dedicated work space and pet oweners must call in advance to see where they are allowed and when ,,"lovely doggie treats,  a dog bandana and toy, plus a dog bowl and door hanger",,,,Studio Apartment Hotel so in the studios 
+,Ashford International Hotel and Spa,Kent,,,Y,Small to medium,2,£25 per room per night ,"Rooms, Lounge & Terrace",All other areas,Yes if staying in the hotel,No,,Y,,Yes in the lounge or terrace
+,"Belton Woods Hotel, Spa & Golf Resort",Grantham,,,Y,Small to medium,2,£25 per room per night ,"Claret Jug, Lounge Bar, Conservatory ",All other areas,Yes if staying in the hotel,Treats,,Y,,Yes in lounge area
+,Cambridge belfry hotel & spa,Cambridge,,,Y,Small to medium,2,£25 per room per night ,Lounge,All other areas,Yes if staying in the hotel,No,,Y,,Yes in lounge area
+,Chesford Grange Hotel,Kenilworth,,,Y,Small to medium,2,£25 per room per night ,Terrace Bar & Terrace,All other areas,Yes if staying in the hotel,"Beds, bowls and treats",,Y,,Yes in bar area
+,Crewe Hall hotel and Spa,Crewe,,,Y,Small to medium,2,£25 per room per night ,Bar & Terrace,All other areas,Yes if staying in the hotel,"Beds, bowls and treats",,Y,,Yes in bar area
+,"Glasgow Westerwood Hotel, Spa & Golf Resort",Glasgow,,,Y,Small to medium,2,£25 per room per night ,Lounge,All other areas,Yes if staying in the hotel,No,,Y,,Lounge 
+,"Forest Pines Hotel, Spa and Golf Resort",Scunthorpe,,,Y,Small to medium,2,£25 per room per night ,"Lounge, bar and Pines Area",All other areas,Yes if staying in the hotel,Treats,,Y,,Yes in bar area
+,Double Tree by Hilton The Stratford,Stratford upon Avon,,,Y,Small to medium,2,£25 per room per night ,Lounge Bar,All other areas,Yes if staying in the hotel,"Beds, bowls and treats",,Y,,Yes in lounge bar
+,"Duston Hall Hotel, Spa and Golf Resort",Norwich,,,Y,Small to medium,2,£25 per room per night ,Terrace Bar & Terrace,All other areas,Yes if staying in the hotel,No,,Y,,Yes in Terrace
+,Hampshire Court Hotel & Spa,Basingstoke,,,Y,Small to medium,2,£25 per room per night ,Lounge bar and courtyard,All other areas,Yes if staying in the hotel,No,,Y,,Yes in lounge bar
+,norton park hotel spa & manor house,Winchester,,,Y,Small to medium,2,£25 per room per night ,"Interior Balcony, Reception and part of bar",All other areas,Yes if staying in the hotel,No,,Y,,Yes in part of bar if pre requested 
+,"Oulton Hall Hotel, Spa & Golf Resort",Leeds,,,Y,Small to medium,2,£25 per room per night ,Great Hall and Terrace,All other areas,Yes if staying in the hotel,"Beds, bowls and treats",,Y,,In the great hall 
+,Oxford Belfry Hotel & Spa,Thame Oxford ,,,Y,Small to medium,2,£25 per room per night ,Lounge Bar,All other areas,Yes if staying in the hotel,No,,Y,,Yes in bar area
+,"Staley Hall Hotel, Spa and Golf Resort",Hexham Northumberland,,,Y,Small to medium,2,£25 per room per night ,"Lounges, Tommy Craig's Bar and Claret Jug",All other areas,Yes if staying in the hotel,No,,Y,,Yes in Lounge
+,Stratford Manor Hotel,Stratford upon Avon,,,Y,Small to medium,2,£25 per room per night ,Lounge Bar,All other areas,Yes if staying in the hotel,"Beds, bowls and treats",,Y,,Yes in bar area
+,The Telford Hotel and Spa,Telford Shropshire,,,Y,Small to medium,2,£25 per room per night ,"1779 Bar, Conference Lounge, Gorge Bar",All other areas,Yes if staying in the hotel,Treats,,Y,,Yes in bar area
+,The Park Royal Hotel and Spa,Warrington,,,Y,Small to medium,2,£25 per room per night ,Bar & Terrace,All other areas,Yes if staying in the hotel,No,,Y,,Yes in bar area
+,Rosewood London,Holborn London,,,Y,N/A,2,N/A,All areas but the spa and fitness. Please contact staff directly to find the dog friendly areas of the food and bervage outlets,Spa and fitness centre,No,Bed,St Jame's Park. The hotel also provide you with an Expawriences Guide with walks and things to do/see,Y- Lincoln Park,N/A,In Holborn Dining room or Mirror Room
+,Galgorm Manor Hotel Belfast,Belfast,,,Y- Only in lodgings not hotel,2 large 3 small- email the hotel to evaluate if this doesn't meet your needs,2 large 3 small,£15 per dog per night,Lower section of McKendry's Bar,Main Resorta nd spas,In crate,No,,Y,No,Lower section of McKendry's Bar
+,Four Seasons Hotel Hampshire,Hampshire,,,Y,30kg and over 6 months and fully house trained ,,£50 per dog per stay,All other areas not mentioned in Not permitted,All areas where food and beverages are served adn the spa/pool areas,No- Dog sitting service is provided,"DOg bed, dishes and food",,Y,N/A,No
+,Gidleigh Park,Newton Abbot,,,Y,N/A- Large dogs are most welcomed,Depends on size of room/ dog- Hotel will help wiyht his,£25 per night,"Bar area, Conservatory, Hallways",The Dining Rooms/ Drawing rooms,Y,"Welcome Pack and Walk Map/ Washing facilities, beds and bowls ",107 acres of land,Direct access to the Moors,N/A,Bar area
+,Fife Arms,Braemar,,,Y,Hotel can help you choose room type suitable for the amount of dogs and size,2- can be discussed with hotel depending on the size of the room ,£25 per dog per night,"The flying Stag, The Foghouse, The courtyard and Hotel Grounds","Drwaing Room The Clunie Dining Room, Elsa's cocktail bar and Berties Whisky Bar",Y,"treats, beds, bowls ",,Y,Y,Yes- advanced notice should be given
+,Fowey Hall,Cornwall,,,Y,No,3,£25 per night per dog,Spa or by the pool ,Everywhere else,Y,"Bowls, beds, blankets, ",,Y,,Yes in restuarant 
+,Hart Shoreditch,London,,,Y,Under 10kg,2,£200 security deposit,,,No,Beds and Bowls,,No,,
+,Cholmondeley Arms,Cholmondeley,,,Y,Nothing bigger than an Alsation,2,£10 per dog,Throughout the Pub,Upstairs rooms and Heasdmasters House,No,Bowls and treats,,Y,N/A,Yes
+,Lympstone Manor Hotel & Restaurant,Exmouth,,,Y,N/A,2/ 1 in the shepards hut if large,£30 per dog per night,"Dogs are welcome in reception, on the outside terrace and hotel grounds.  two Dog Friendly rooms at Lympstone Manor. The Tern one of our Grand Estuary Suites, and the Greenfinch one of our Superior Estuary Suites are our Dog Friendly rooms in the main house.
+
+Alternatively, all six of our shepherd’s huts are dog friendly","Dogs are not allowed within the perimeter of the outdoor swimming pool, lower terrace, croquet lawn or tennis court.",Y- if reception are made aware,"1 dog bed, 2 bowels, 1 towel, a treat and 2 poo bags per dog",Enclosed Estate,Y,"Grand Estuary Suite – The Tern offers panoramic views of the estuary from your private terrace, as well as outdoor fire pits and soak tubs. They benefit from partitioned living and sleeping and their own access from the gardens.
+
+The Superior Estuary Suite – The Greenfinch boasts our largest outdoor area, with a private garden to be enjoyed undisturbed by others and accessed by a balcony.",No but they can offer room service
+,Pennyhill Park,Surry,,,Y,depend on the room category. For larger dogs we recommend Garden Junior Suites and above,2,£40 per stay,"Hillfield bar, reception area, Lily Pond Terrace, all outside walking areas","2 restaurants (Hillfield & Latymer), or the spa",Y,bed and bowl,,Y,"Garden Junior Suites, Wentworth Suite and The Granary all have their own private gardens",Y- Hillfield bar
+,Bath Priory,Bath,,,Y- 'Foxglove' and 'Moringa' rooms only,N/A,2,£25 per dog per stay,The Pantry & Terrace.,"restaurant, library, drawing room or the spa",Y- if reception are made aware,Bed and bowl,,Y,,The Pantry
+,Luckham Hotel and Spa,Chippenham,,,"Y- All cottages 2 courtyard rooms, 1x manor room and 1x junior suite ",N/A,"X2 Country Rooms – 1 dog per room
+X1 Manor Room – 2 dogs
+X1 Junior Suite – 2 dogs
+Cottages are allowed 2 dogs per cottage.",£50 per dog per stay,"reception area of the hotel, in the lounge area of The Walled Garden Restaurant and they are allowed all around the grounds while on a lead","lounge area and drawing room or anywhere in the main house apart from the reception area, Restaurant Hywel Jones, Restaurant Area of The Walled Garden and the spa.",Y,"Food, water bowls towels bedding treats and a toy",,Y,,Lounge Area or room service 
+,South Lodge ,Horsham,,,"Y in these room types Comfy Room, Luxe Junior Suite, Garden Suite, Family Suite, or Hot Tub Suite ",N/A,2- contact if you have more as they may beable to accomodate depending on size. ,£40 per dog,"reception, lounge, and bar area",restaurants or anywhere in The Spa,Y- if reception are made aware,Beds bowls and toys ,93 acres of land ,Y,,Lounge and bar 
+,Ellenborough Park,Cheltenham,,,Y,N/A,2,£30 per dog per night,"Reception, Atrium, Bar, Horse Box Brasserie, on the grounds (on leads)","Spa, Pool area, Great Hall, Restaurant, De La Bere court or on furniture ",Y,"Le Chameau dog bed or create, food, water bowls and treats",,Y,"Garden Classic, Garden Luxury and The Lodge has an enclosed garden",In Atrium Area
+,DoubleTree by Hilton Bristol North,Bristol,,,Y,30kg,2,£35 per stay,Lobby only ,Resturant ,No,Bowls,,Y,N/A,Lobby
+,Sea Containers London,London,,,Y,9.1kg,2,£100,Throughout the hotel ,"Bars, spa or cinema area",No,"Beds, bowls and treats ",,Y,some rooms offer outdoor patio spaces,Yes
+,Woolley Grange ,Wilshire,,,Y,N/A,N/A,£25 per dog  per night ,All others areas ,"spa, by the outside pool and the walled garden",Y,Bed bowls and gift bag and dog washing station ,Paddock for running. ,Y,,Special section of the restuaarant 
+,Forest Side,The Lakes Cumbria,,,Y- Cosy and Supberb rooms ,N/A,N/A,£25 per dog,Bar and lounge until 6pm,Restuarant,Y,,Lake District,Y,,
+,Lord Crewe Arms,Consett Durham,,,Y,N/A,2,£20 per dog per night,anywhere on the ground floor,Upstairs dining room and some bedrooms,No,Beds bowls and towels ,Countryside ,Y,,Downstairs dining room 
+,The Ship,Suffolk,,,Y,N/A,N/A,£25 per dog per ,Resturant,N/A,No,Bed bowls and treats ,,Y,,Yes 
+,London Hilton Park Lane ,London,,,Y,10kg,2,£50 pet fee,Lobby and bedrooms,Food and berverage places,Y,Bed and bowl,Hyde Park,Y,,No
+,One Aldwych,London,,,Y,Small to medium,1 over 1 year of age fully house trained ,N/A,Library and lobby until 5pm ,"Indigo resturant, spa and Healht Club",No,Bowl and treats and bed,Hyde Park 27 minutes away ,Y- Victroia emabankment gadrens is the closest,,Yes 
+,Noel Arms,Chipping Campden,,,Y,N/A,3- negotiable on size,£15 per night ,ANywhere but the restuarant,Restuarant,Y,Bowl,Fields located around the hotel,Y,,Conservatory or bar area
+,Kylesku Hotel,Sutherland Scotland,,,Y,N/A,1,£15 per dog per night up to £60,BAr and residents lounge,Resturant ,Y if dining in the hotel only ,"Bowl, towel  mat toys and treats",Beaches,Y,,BAr and residents lounge
+,Pennally Abbey,Pembrokeshire Wales,,,Y in 4 rooms ( &10: Cosy Coach House and 11 & 12: Large Coach House) ,N/A,1,£15 per night ,"Lounge, bar and sunroom",Main dining room,Y,No,Beaches,Y,Shared with the other coach houses,Sunroom
+,Watergate Bay Hotel,Cornwall,,,Y,N/A,2,£15 for 1 and £20 for 2 per night,"The living space, the beach hut and reception","Zacry's Kid's Zone, Swim club and breakfast zone",Y,Beds and bowls,Beaches,Y,,The living space
+,Devonshire Arms Hotel Bolton Abbey,Skipton,,,Y,N/A,2,£15 per dog per night ,Lounges and Brassiere Restaurant,Gadren Room Restuarant,Y,Bowl and treats (free) Bed £25 per night,Countryside/ Bolton Abbey,Y,,Y in specific area
+,Rose and Crown,Kings Lynn,,,Y,N/A,3- enquire first if bringing more than 2,£15 per dog,All areas except the Cellar Bar,Cellar Bar,Y,Bowls and treats,Beaches & Country Side,Y,,Garden Room
+,Gara Rock,Salcombe ,,,Y,N/A,2,£45 per pet ,"All areas including cinema, lounge and restaurant ",Gara kitchen and spa,Y,Dog welcome box,Beaches,Y,Junior Suites and Residences with Garden all have access to a shared garden that is gated,Yes 
+,Hare and Hounds Hotel,Tetbury,,,Y,N/A,Typically 2- can discuss 3 ,£20 per night or £30 for 2,All ground floor areas expcept the Beaufort Restaurant,Beaufront restaurant ,Y,"Bed and bowl, breakfast sausage/ dog wash area available ",Hotel recommend walking routes ,Y- own grounds ,,Beaufort lounge
+,Laiston House,Winchester,,,Y,N/A,"The Smart and Luxe rooms can fit one dog comfortably.  suites, two to three dogs can be accommodated",£40 per dog per stay,Bar and drawing room,Avenue Restuarnt and The Wellhouse ,Y,Bed bowls and treats ,63 acres of land ,Y ,N/A,Bar or room service 
+,Another Place,Lake District,,,Y,N/A,2,£15 per dog per night or £20 for 2,"Living space Restaurant, grounds on leads and Brackenrigg inn","Rampsbeck restaurant, the library and swim club",No,No,Lake District,Y,,Living Space Restaurant 
+,Pale Hall Hotel ,Bala Wales,,,Y,N/A,"2 (3 if small, please contact) ",£25 per dog per night in allocated dog friendly rooms,"Huntsmans Restaurant, Main hall, Guests rooms","Henry Robertson Restaurant, Library, Four Seasons",Y,,,Y,"Dog Field for running off a lead, Hotel grounds on lead",Yes 
+,Victoria Hotel ,Holkham Wells Next to The Sea- Norfolk ,,,Y,N/A,Down to the room type. Contact first ,£10 per night per dog,All areas but on a lead ,Ancient House ,No,Bed bowls towl and biscuits,Beaches ,Y,,Yes 
+,The Retreat East,Suffolk,,,Y apart fro in 'little barns'',N/A,1 dog in shepard huts no limites else where,£25 per dog,All areas but the spa,Spa,Y,Bed and bowl,,Y,,Yes 
+,"Coniston Hotel, Country Estate and Spa",Skipton,,,Y,N/A,2,£20 per dog per night,All areas but the spa and first floor,First floor and spa,No,"Bowl, towel and treat",,Y,Deluxe rooms have a patio but no enclosed so lead required ,Yes 
+,Goodwood Hotel ,Chichester,,,Y,N/A,2,£30 per dog per stay,All areas,Health club,Yes,Bed bowl and treats,Hotel provides map plus hotel grounds,Y,Garden King rooms have direct access to the hotel garden but dogs need to be on a lead,Yes 
+,The Blankley Hotel ,Norfolk,,,Y,N/A,3,£20 per dog per night,Ground floor bedrooms only- Keep of furniture ,All public areas,Yes,No,,Y- but not allowed to use for comfort breaks ,N/A,No
+,Chilston Park Hotel,Maidstone,,,Y,N/A,N.A,£20 for 1 dog per night and £10 per night for additionla dogs ,Evervy where but the Culpepers Restaurant,Culpepers restaurant,Yes,Beds and bowls ,Hotel Grounds,Y,In some rooms ,Marble Lounge or Bar
+,Slebech Park Country Estate,Haverfordwest Wales,,,"Y in certain room types these room types- The Wall Room
+Orangery 1, 2, & 3
+Eashing 4 (maximum 1 dog)
+Loose Box
+Dunluce 1 & 2",,"
+Eashing 4 (maximum 1 dog)
+All other rooms 2-3 but email to check ",£15 per dog per night ,Specific area of the resturant,Other areas of the restaurant,,Beds and bowls ,Big gardens in hotel groundns ,Y,,Specific area of the resturant
+,Beadnell Towers,Nothumberland,,,Y,N/A,2,£25 per dog,"Bar, reading room",Restuarant and room that aren't dog friendly,No,No,,Y- church green,,Bar Area
+,Hotel Endsleigh,Dartmoor Devon,,,Y,N/A,2,£25 per dog per night ,"Sitting room, library and private dinings rooms",Small or main dining rooms,No,"Bed bowl, towl and treats ",100 acres grounds,Y- 100 acres of land,,"Sitting room, library and private dinings rooms"
+,The Dog at Wingham,Wingham Kent,,,Y,N/A but depends on roomsize,1/2 depending on roomsize,£25 per room,all other areas,Compact king size rooms,Yes,No but treats in the bare ,Hotel can recommend ,Y,,Yes 
+,Park Hall Hotel and Spa,Lancashire,,,Y,,,,,,,,,,,
+,Raddison Red Liverpool,Liverpool,,,Y,,,,,,,,,,,
+,Raddison Red Grenwich London,London,,,Y,,,,,,,,,,,
+,Park Inn Peterborough,Peterborough,,,Y,,,,,,,,,,,
+,Park Inn South End on Sea,South End on Sea,,,Y,,,,,,,,,,,
+,Park Inn Cardiff,Cardiff,,,Y,,,,,,,,,,,
+,Raddison Blu Cardiff,Cardiff,,,Y,,,,,,,,,,,
+,Nobu Hotel Shoreditch,Shoreditch London ,,,Y,,,,,,,,,,,
+,Nobu Hotel London Portman Square,London,,,Y,,,,,,,,,,,
+,nHow London,London,,,,,,,,,,,,,,
