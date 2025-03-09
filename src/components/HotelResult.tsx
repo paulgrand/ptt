@@ -68,10 +68,104 @@ export default function HotelResult({ result, location, isDogFriendly, dogFriend
 
   const lowestPrice = getLowestPrice(result.offers);
   const imageUrl = result.image; // Adjust based on your data structure
+  // useEffect(() => {
+  //   const fetchHotelImage = async () => {
+  //     if (result.hotelId) {
+  //       try {
+  //         const response = await fetch(`/api/hotel-images?hotelId=${result.hotelId}`);
+  //         if (!response.ok) throw new Error('Failed to fetch image');
+  //         const data = await response.json();
+  //         if (data && data.length > 0) {
+  //           setImageUrl(data[0].url); // Assuming the API returns an array of image objects
+  //         }
+  //       } catch (error) {
+  //         console.error('Error fetching hotel image:', error);
+  //         setImageError(true);
+  //       }
+  //     }
+  //   };
 
-  const formatHotelName = (name: string) => {
-    return name.replace(/[^a-zA-Z0-9\s]/g, '').trim();
-  };
+  //   fetchHotelImage();
+  // }, [result.hotelId]);
+
+  function formatHotelName(name: string): string {
+    // First convert to lowercase
+    let formattedName = name.toLowerCase();
+    
+    // List of words that should remain lowercase
+    const lowercaseWords = ['and', 'at', 'by', 'de', 'di', 'da', 'in', 'of', 'the', 'von', 'van', 'la'];
+    
+    // List of hotel chains and brands that need specific capitalization
+    const hotelBrands = {
+      'hilton': 'Hilton',
+      'hampton by hilton': 'Hampton by Hilton',
+      'doubletree by hilton': 'DoubleTree by Hilton',
+      'holiday inn': 'Holiday Inn',
+      'holiday inn express': 'Holiday Inn Express',
+      'premier inn': 'Premier Inn',
+      'travelodge': 'Travelodge',
+      'marriott': 'Marriott',
+      'hyatt': 'Hyatt',
+      'novotel': 'Novotel',
+      'ibis': 'ibis',
+      'ibis styles': 'ibis Styles',
+      'mercure': 'Mercure',
+      'crowne plaza': 'Crowne Plaza',
+      'intercontinental': 'InterContinental',
+      'indigo': 'Hotel Indigo',
+      'best western': 'Best Western',
+      'macdonald': 'Macdonald',
+      'malmaison': 'Malmaison',
+      'radisson blu': 'Radisson Blu',
+      'park plaza': 'Park Plaza',
+      'leonardo': 'Leonardo',
+      'jurys inn': 'Jurys Inn',
+      'village': 'Village'
+    };
+  
+    // Check for hotel brands first
+    for (const [brand, properName] of Object.entries(hotelBrands)) {
+      if (formattedName.includes(brand)) {
+        formattedName = formattedName.replace(brand, properName);
+      }
+    }
+  
+    // Split into words
+    let words = formattedName.split(' ');
+  
+    // Capitalize each word unless it's in the lowercase list
+    words = words.map((word, index) => {
+      // Always capitalize first and last word
+      if (index === 0 || index === words.length - 1) {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+      }
+      
+      // Check if word should remain lowercase
+      if (lowercaseWords.includes(word)) {
+        return word;
+      }
+  
+      // Handle special cases like McDonald's, O'Neill
+      if (word.includes("'")) {
+        return word.split("'")
+          .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+          .join("'");
+      }
+  
+      // Handle special cases like McLaren, MacBook
+      if (word.startsWith('mc') || word.startsWith('mac')) {
+        return word.charAt(0).toUpperCase() + 
+               word.charAt(1).toLowerCase() + 
+               word.charAt(2).toUpperCase() + 
+               word.slice(3);
+      }
+  
+      // Default case: capitalize first letter
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+  
+    return words.join(' ');
+  }  
 
   const DogFriendlyDetails = ({ info }) => (
     <div className="bg-orange-50 p-4 rounded-lg border border-orange-100 mb-4">
@@ -182,7 +276,7 @@ export default function HotelResult({ result, location, isDogFriendly, dogFriend
         <div className="flex-grow">
           <div className="flex items-start justify-between gap-2">
             <div className="flex items-center gap-2">
-              <h2 className="font-semibold">{formatHotelName(result.name)}</h2>
+              <h2 className="font-semibold">{formatHotelName(result.name)} (ID: {result.hotelId})</h2>
               {isExpanded ? <FaChevronUp className="text-gray-500" /> : <FaChevronDown className="text-gray-500" />}
             </div>
             <div className="flex items-center gap-2">
