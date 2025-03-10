@@ -52,7 +52,7 @@ export async function GET(req) {
     const hotelSearchUrl = `${process.env.HOTELS_API_URL}?
       &latitude=${lat}
       &longitude=${lng}
-      &radius=20`
+      &radius=40`
     console.log(`API URL: ${hotelSearchUrl}`);
     const apiResponse = await fetch(
       hotelSearchUrl,
