@@ -44,11 +44,15 @@ export async function GET(req) {
     // Get OAuth2 access token
     const accessToken = await getAccessToken();
 
+    // const hotelSearchUrl = `${process.env.HOTELS_API_URL}?
+    //   &latitude=${lat}
+    //   &longitude=${lng}
+    //   &radius=20
+    //   &amenities=PETS_ALLOWED`
     const hotelSearchUrl = `${process.env.HOTELS_API_URL}?
       &latitude=${lat}
       &longitude=${lng}
-      &radius=20
-      &amenities=PETS_ALLOWED`
+      &radius=20`
     console.log(`API URL: ${hotelSearchUrl}`);
     const apiResponse = await fetch(
       hotelSearchUrl,
