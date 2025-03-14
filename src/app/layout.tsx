@@ -60,10 +60,10 @@ export default function RootLayout({
 
   const handlePlaceSelected = () => {
     // Set only the startDate to today, leaving endDate as null
-    setDateRange({
-      startDate: new Date(),
-      endDate: null
-    });
+    // setDateRange({
+    //   startDate: new Date(),
+    //   endDate: null
+    // });
 
     // Open the date picker
     if (datePickerRef.current) {
@@ -135,43 +135,51 @@ export default function RootLayout({
                 <label className="block text-sm font-medium mb-1">Dates</label>
                 <div className="relative">
                 <DatePicker
-    selectsRange={true}
-    startDate={dateRange.startDate}
-    endDate={dateRange.endDate}
-    onChange={(update) => {
-      const [start, end] = update;
-      // If selecting start date, allow any valid date
-      if (!start) {
-        setDateRange({ startDate: null, endDate: null });
-        return;
-      }
-      // If selecting end date, enforce minimum stay
-      if (start && !end) {
-        const minEndDate = new Date(start);
-        minEndDate.setDate(minEndDate.getDate() + 1); // Minimum 1 night stay
-        if (update[1] && update[1] < minEndDate) {
-          return; // Don't allow selection of end date less than minimum
-        }
-      }
-      setDateRange({
-        startDate: start,
-        endDate: end
-      });
-    }}
-    minDate={dateRange.startDate ? new Date(dateRange.startDate) : new Date()}
-    monthsShown={2}
-    dateFormat="dd/MM/yyyy"
-    placeholderText="Select dates"
-    className="w-full p-2 border rounded"
-    calendarClassName="border rounded shadow-lg"
-    showDisabledMonthNavigation
-    ref={(el) => {
-      if (el) {
-        datePickerRef.current = el;
-      }
-    }}
-    selectsStart
-  />
+                  selectsRange={true}
+                  startDate={dateRange.startDate}
+                  endDate={dateRange.endDate}
+                  onChange={(update) => {
+                    const [start, end] = update;
+                    
+                    // If selecting start date, only allow today or future dates
+                    if (start) {
+                      const today = new Date();
+                      today.setHours(0, 0, 0, 0);
+                      
+                      if (start < today) {
+                        return; // Don't allow past dates
+                      }
+                    }
+
+                    // If selecting end date, enforce minimum stay
+                    if (start && !end) {
+                      const minEndDate = new Date(start);
+                      minEndDate.setDate(minEndDate.getDate() + 1); // Minimum 1 night stay
+                      if (update[1] && update[1] < minEndDate) {
+                        return; // Don't allow selection of end date less than minimum
+                      }
+                    }
+
+                    setDateRange({
+                      startDate: start,
+                      endDate: end
+                    });
+                  }}
+                  minDate={new Date()} // This ensures no past dates can be selected
+                  monthsShown={2}
+                  dateFormat="dd/MM/yyyy"
+                  placeholderText="Select dates"
+                  className="w-full p-2 border rounded"
+                  calendarClassName="border rounded shadow-lg"
+                  showDisabledMonthNavigation
+                  ref={(el) => {
+                    if (el) {
+                      datePickerRef.current = el;
+                    }
+                  }}
+                  isClearable={true} // Allows clearing the selection
+                />
+
                   {dateRange.startDate && dateRange.endDate && (
                     <div className="absolute -bottom-6 left-0 text-sm text-gray-600">
                       {calculateNights(dateRange.startDate, dateRange.endDate)} nights

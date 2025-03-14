@@ -44,11 +44,6 @@ export async function GET(req) {
     // Get OAuth2 access token
     const accessToken = await getAccessToken();
 
-    // const hotelSearchUrl = `${process.env.HOTELS_API_URL}?
-    //   &latitude=${lat}
-    //   &longitude=${lng}
-    //   &radius=20
-    //   &amenities=PETS_ALLOWED`
     const hotelSearchUrl = `${process.env.HOTELS_API_URL}?
       &latitude=${lat}
       &longitude=${lng}
@@ -77,51 +72,57 @@ export async function GET(req) {
     // console.log(data)
     // console.log(meta);
 
-    // Take all IDs in the data.hotels array, combine them into a string e.g. hotelId1, hotelId2, hotelId3
+    // Take the first 100 IDs in the data.hotels array, combine them into a string e.g. hotelId1, hotelId2, hotelId3
     // and use that for a subsequent API request.
-    const hotelIds = data.map((hotel) => hotel.hotelId).join(",");
+
+    // take the first 100 items from data.
+    const first50 = data.slice(0, 50);
+    const hotelIds = first50.map((hotel) => hotel.hotelId).join(",");
+
     // console.log(hotelIds);
 
     // Make a subsequent API request to get the details of the hotels
-    const hotelOffersUrl = `${process.env.HOTEL_OFFERS_API_URL}?hotelIds=${hotelIds}&adults=1&checkInDate=${startDate}&checkOutDate=${endDate}&roomQuantity=1`;
+    // Trim hotel IDs to 1500 bytes.
+    const hotelIdsTrimmed = hotelIds.substring(0, 1500);
+    const hotelOffersUrl = `${process.env.HOTEL_OFFERS_API_URL}?hotelIds=${hotelIdsTrimmed}&adults=1&checkInDate=${startDate}&checkOutDate=${endDate}&roomQuantity=1`;
 
-      // console.log(`URL: ${hotelOffersUrl}`);
+    const offersApiResponse = await fetch(
+      hotelOffersUrl,
+      {
+        headers: {
+          Authorization: `Bearer ${accessToken}`, // Attach OAuth2 token
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
-    
-      const offersApiResponse = await fetch(
-        hotelOffersUrl,
-        {
-          headers: {
-            Authorization: `Bearer ${accessToken}`, // Attach OAuth2 token
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      // // set data and meta properties of response to offersData and offersMeta.
-      const offersApiResponseJson = await offersApiResponse.json();
+    // // set data and meta properties of response to offersData and offersMeta.
+    const offersApiResponseJson = await offersApiResponse.json();
+    console.log('------------- Offers API response: --------------')
+    console.log(offersApiResponseJson)
 
     // Update data to add a new "offers" property, made up of offersApiResponse.json.data[].offers.
     // console.log('0-------0-----------------');
-    console.log(offersApiResponseJson.data[0])
+    // console.log(offersApiResponseJson.data[0])
 
-      // For every item in data, check whether hotelId is present in offersApiResponseJson.data, where offersApiResponseJson.data has the format: [ hotel: { hotelId: "something" }, offers: [] }.
-      // If it is, add the offers property to the data item.
-      data.forEach((item) => {
-        console.log(item.hotelId)
-        const offer = offersApiResponseJson.data.find(
-          (offer) => offer.hotel.hotelId === item.hotelId
-        );
-        if (offer) {
-          item.offers = offer.offers;
-        }
-      });
+    // For every item in data, check whether hotelId is present in offersApiResponseJson.data, where offersApiResponseJson.data has the format: [ hotel: { hotelId: "something" }, offers: [] }.
+    // If it is, add the offers property to the data item.
+    data.forEach((item) => {
+      // console.log(item.hotelId)
+      const offer = offersApiResponseJson?.data?.find(
+        (offer) => offer.hotel.hotelId === item.hotelId
+      );
+      if (offer) {
+        item.offers = offer.offers;
+      }
+    });
 
     // console.log(data);
 
     // console.log(data[1].address);
     return NextResponse.json(data);
   } catch (error) {
+    console.error("Error:", error);
     return NextResponse.json(
       { error: "An unexpected error occurred", details: error.message },
       { status: 500 }
