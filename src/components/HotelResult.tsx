@@ -1,7 +1,9 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FaPaw, FaBuilding, FaChevronDown, FaChevronUp, FaCreditCard, FaDog, FaCheck, FaTimes, FaMapMarkerAlt } from 'react-icons/fa';
 import MapModal from './MapModal';
+import Image from 'next/image';
+
 
 
 const getLowestPrice = (offers: any[]): number | null => {
@@ -60,6 +62,34 @@ export default function HotelResult({ result, location, isDogFriendly, dogFriend
   const [isExpanded, setIsExpanded] = useState(false);
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [imageError, setImageError] = useState(false);
+  const [imageUrl, setImageUrl] = useState<string | null>(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // When component enters viewport
+        if (entries[0].isIntersecting) {
+          setShouldLoad(true);
+          observer.disconnect(); // Stop observing once we start loading
+        }
+      },
+      {
+        root: null, // viewport
+        rootMargin: '50px', // Start loading when within 50px of viewport
+        threshold: 0.1 // Trigger when even 10% is visible
+      }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const getLowestPrice = (offers) => {
     if (!offers || !offers.length) return null;
@@ -67,23 +97,44 @@ export default function HotelResult({ result, location, isDogFriendly, dogFriend
   };
 
   const lowestPrice = getLowestPrice(result.offers);
-  const imageUrl = result.image; // Adjust based on your data structure
+  // const imageUrl = result.image; // Adjust based on your data structure
+  useEffect(() => {
+    const fetchHotelImage = async () => {
+      // Only fetch if component is in/near viewport
+      if (!shouldLoad) return;
+
+      // Reset states at the start of each fetch
+      setImageError(false);
+      setImageUrl(null);
+
+      if (result.name && location) {
+        try {
+          const searchParams = new URLSearchParams({
+            hotelName: formatHotelName(result.name),
+            location: location
+          });
+          
+          const response = await fetch(`/api/hotel-images?${searchParams}`);
+          if (!response.ok) throw new Error('Failed to fetch image');
+          
+          const data = await response.json();
+          console.log('Raw API response:', data);
+
+          if (data) {
+            setImageUrl(data.thumbnailUrl);
+          }
+        } catch (error) {
+          console.error('Error fetching hotel image:', error);
+          setImageError(true);
+        }
+      }
+    };
+
+    fetchHotelImage();
+  }, [result.name, location, shouldLoad]);
   // useEffect(() => {
-  //   const fetchHotelImage = async () => {
-  //     if (result.hotelId) {
-  //       try {
-  //         const response = await fetch(`/api/hotel-images?hotelId=${result.hotelId}`);
-  //         if (!response.ok) throw new Error('Failed to fetch image');
-  //         const data = await response.json();
-  //         if (data && data.length > 0) {
-  //           setImageUrl(data[0].url); // Assuming the API returns an array of image objects
-  //         }
-  //       } catch (error) {
-  //         console.error('Error fetching hotel image:', error);
-  //         setImageError(true);
-  //       }
-  //     }
-  //   };
+  //   console.log('imageUrl updated:', imageUrl);
+  // }, [imageUrl]);
 
   //   fetchHotelImage();
   // }, [result.hotelId]);
@@ -168,7 +219,7 @@ export default function HotelResult({ result, location, isDogFriendly, dogFriend
   }  
 
   const DogFriendlyDetails = ({ info }) => (
-    <div className="bg-orange-50 p-4 rounded-lg border border-orange-100 mb-4">
+    <div style={{backgroundColor: '#ffffff'}} className="bg-orange-50 p-4 rounded-lg border border-orange-100 mb-4">
       <h4 className="font-medium text-lg flex items-center gap-2 mb-4">
         <FaDog className="text-orange" />
         Dog-Friendly Information
@@ -254,20 +305,27 @@ export default function HotelResult({ result, location, isDogFriendly, dogFriend
   );
 
   return (
-    <div className="flex flex-col">
+    <div ref={containerRef} style={{backgroundColor: '#fff'}} className="flex flex-col">
       <li 
         className="border p-4 rounded-t shadow hover:shadow-lg flex items-start gap-4 relative cursor-pointer"
         onClick={() => setIsExpanded(!isExpanded)}
       >
         <div className="w-32 h-32 flex-shrink-0">
-          {imageUrl && !imageError ? (
-            <img 
-              src={imageUrl} 
-              alt={`${formatHotelName(result.name)}`}
-              className="w-full h-full object-cover rounded"
-              onError={() => setImageError(true)}
-            />
+          {shouldLoad ? (
+            imageUrl && !imageError ? (
+              <img 
+                src={imageUrl} 
+                alt={`${formatHotelName(result.name)}`}
+                className="w-full h-full object-cover rounded"
+                onError={() => setImageError(true)}
+              />
+            ) : (
+              <div className="w-full h-full bg-gray-100 rounded flex items-center justify-center">
+                <FaBuilding className="text-gray-400 text-4xl" />
+              </div>
+            )
           ) : (
+            // Placeholder while not in viewport
             <div className="w-full h-full bg-gray-100 rounded flex items-center justify-center">
               <FaBuilding className="text-gray-400 text-4xl" />
             </div>

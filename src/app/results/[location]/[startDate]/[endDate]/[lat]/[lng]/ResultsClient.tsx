@@ -110,7 +110,7 @@ export default function ResultsClient({ location, startDate, endDate, lat, lng }
         <strong>{startDate}</strong> to <strong>{endDate}</strong>.
       </p>
 
-      <div className="bg-gray-100 p-4 rounded-lg mb-6">
+      <div style={{backgroundColor:"#f0e7c5"}} className="bg-gray-100 p-4 rounded-lg mb-6">
         <div className="flex items-center gap-4">
           <label className="text-sm font-medium text-gray-700">Sort by:</label>
           <select

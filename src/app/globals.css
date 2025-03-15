@@ -5,9 +5,15 @@
 :root {
   /* --background: #ffffff;
   --foreground: #171717; */
-  --background: #ffffff;
+  --background: #f7f0e9;
   --foreground: #C77465;
 }
+
+/* #86795A
+// #A3A38B
+// #EEDAC2
+// #E8B59B
+// #C77465 */
 
 /* @media (prefers-color-scheme: dark) {
   :root {
@@ -46,4 +52,8 @@ body {
 .react-datepicker__day--range-start,
 .react-datepicker__day--range-end {
   background-color: #c77465 !important;
+}
+
+.tt-datepicker {
+  min-width: 250px;
 }

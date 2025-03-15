@@ -169,7 +169,7 @@ export default function RootLayout({
                   monthsShown={2}
                   dateFormat="dd/MM/yyyy"
                   placeholderText="Select dates"
-                  className="w-full p-2 border rounded"
+                  className="w-full p-2 border rounded tt-datepicker"
                   calendarClassName="border rounded shadow-lg"
                   showDisabledMonthNavigation
                   ref={(el) => {
