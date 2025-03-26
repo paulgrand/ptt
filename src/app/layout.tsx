@@ -76,7 +76,7 @@ const ImageCarousel = () => {
       position: 'center center' // Default center positioning
     },
   ];
-  
+
   const [shuffledImages, setShuffledImages] = useState(images);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -96,7 +96,7 @@ const ImageCarousel = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
+      setCurrentIndex((prevIndex) =>
         prevIndex === shuffledImages.length - 1 ? 0 : prevIndex + 1
       );
     }, 10000);
@@ -204,127 +204,112 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased min-h-screen flex flex-col`}>
         {/* Logo section outside the carousel */}
-        {/* <div className="relative z-10 pt-6 pb-4 flex flex-col items-center">
-          <Image
-            src="/ptt.png"
-            alt="Phoebe's Travel Tails"
-            width={200}
-            height={200}
-            priority
-          />
-          <h1 className="text-2xl font-medium tracking-tight mt-4 mb-2">
-            Travel Tails
-          </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto text-sm leading-relaxed text-center">
-            Researched and verified dog friendly hotels.
-          </p>
-        </div> */}
-
-        {/* Carousel section with centered form */}
-        <div className="relative h-[800px]"> {/* Increased height */}
-  {/* Carousel as background */}
-  <ImageCarousel />
-
-  {/* Overlaid content */}
-  <div className="relative z-10 h-full flex flex-col items-center">
-    {/* Logo section */}
-    <div className="pt-6 pb-4">
-      <div className="p-6 flex flex-col items-center">
-        <Image
-          src="/ptt.png"
-          alt="Phoebe's Travel Tails"
-          width={200}
-          height={200}
-          priority
-        />
-        {/* <h1 className="text-2xl font-medium tracking-tight mt-4 mb-2 text-center">
-          Travel Tails
-        </h1> */}
-        <p className="text-gray-100 max-w-2xl mx-auto text-md leading-relaxed text-center">
-          Researched and verified dog friendly hotels.
-        </p>
-      </div>
-    </div>
-
-    {/* Form section */}
-    <div className="flex items-center justify-center p-6">
-      <div className="w-full max-w-4xl">
-        <div className="bg-white/35 backdrop-blur-sm rounded-lg p-6 shadow-lg">
-          <form onSubmit={handleSearch} className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:gap-4 md:items-end">
-                  <div className="flex-1 min-w-[300px]">
-                    <label style={{color: '#222222'}} className="block text-md font-medium mb-2">Location</label>
-                    <LocationPicker
-                      value={location}
-                      onChange={setLocation}
-                      ref={locationInputRef}
-                      onPlaceSelected={handlePlaceSelected}
-                    />
-                  </div>
-                  
-                  <div className="flex-1 min-w-[200px]">
-                    <label style={{color: "#222222"}} className="block text-md font-large mb-2">Dates</label>
-                    <div className="relative">
-                      <DatePicker
-                        selectsRange={true}
-                        startDate={dateRange.startDate}
-                        endDate={dateRange.endDate}
-                        onChange={(update) => {
-                          const [start, end] = update;
-                          
-                          // If selecting start date, only allow today or future dates
-                          if (start) {
-                            const today = new Date();
-                            today.setHours(0, 0, 0, 0);
-                            
-                            if (start < today) {
-                              return; // Don't allow past dates
-                            }
-                          }
-
-                          // If selecting end date, enforce minimum stay
-                          if (start && !end) {
-                            const minEndDate = new Date(start);
-                            minEndDate.setDate(minEndDate.getDate() + 1); // Minimum 1 night stay
-                            if (update[1] && update[1] < minEndDate) {
-                              return; // Don't allow selection of end date less than minimum
-                            }
-                          }
-
-                          setDateRange({
-                            startDate: start,
-                            endDate: end
-                          });
-                        }}
-                        minDate={new Date()}
-                        monthsShown={1} // Show only 1 month on mobile
-                        dateFormat="dd/MM/yyyy"
-                        placeholderText="Select dates"
-                        className="w-full p-2 border rounded"
-                        calendarClassName="border rounded shadow-lg"
-                        showDisabledMonthNavigation
-                        ref={datePickerRef}
-                        isClearable={true}
-                      />
-                      {dateRange.startDate && dateRange.endDate && (
-                        <div className="absolute -bottom-6 left-0 text-sm text-gray-600">
-                          {calculateNights(dateRange.startDate, dateRange.endDate)} nights
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full md:w-auto bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors"
-                  >
-                    Search
-                  </button>
-                </form>
+        {/* Logo section */}
+        <div className="pt-4 pb-4 flex justify-center w-full"> {/* Added flex justify-center and w-full */}
+          <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 shadow-xl max-w-4xl w-full mx-auto"> {/* Added max-w-4xl and mx-auto */}
+            <div className="flex items-center gap-6">
+              <Image
+                src="/ptt.png"
+                alt="Phoebe's Travel Tails"
+                width={200}
+                height={200}
+                priority
+              />
+              <div className="flex flex-col justify-center">
+                <h1 className="text-2xl font-medium tracking-tight mb-2">
+                  Travel Tails
+                </h1>
+                <p className="text-gray-20 max-w-2xl text-sm leading-relaxed">
+                  Researched and verified dog friendly hotels.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+
+        <div className="relative h-[500px]">
+          <ImageCarousel />
+
+          <div className="relative z-10 h-full flex flex-col items-center">
+            <div className="flex items-center justify-center p-6">
+              <div className="w-full max-w-4xl">
+                <div style={{marginTop: "5em"}} className="bg-white/35 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+                  <form onSubmit={handleSearch} className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:gap-4 md:items-end">
+                    <div className="flex-1 min-w-[300px]">
+                      <label style={{ color: '#222222' }} className="block text-md font-medium mb-2">Location</label>
+                      <LocationPicker
+                        value={location}
+                        onChange={setLocation}
+                        ref={locationInputRef}
+                        onPlaceSelected={handlePlaceSelected}
+                      />
+                    </div>
+
+                    <div className="flex-1 min-w-[200px]">
+                      <label style={{ color: "#222222" }} className="block text-md font-large mb-2">Dates</label>
+                      <div className="relative">
+                        <DatePicker
+                          selectsRange={true}
+                          startDate={dateRange.startDate}
+                          endDate={dateRange.endDate}
+                          onChange={(update) => {
+                            const [start, end] = update;
+
+                            // If selecting start date, only allow today or future dates
+                            if (start) {
+                              const today = new Date();
+                              today.setHours(0, 0, 0, 0);
+
+                              if (start < today) {
+                                return; // Don't allow past dates
+                              }
+                            }
+
+                            // If selecting end date, enforce minimum stay
+                            if (start && !end) {
+                              const minEndDate = new Date(start);
+                              minEndDate.setDate(minEndDate.getDate() + 1); // Minimum 1 night stay
+                              if (update[1] && update[1] < minEndDate) {
+                                return; // Don't allow selection of end date less than minimum
+                              }
+                            }
+
+                            setDateRange({
+                              startDate: start,
+                              endDate: end
+                            });
+                          }}
+                          minDate={new Date()}
+                          monthsShown={1} // Show only 1 month on mobile
+                          dateFormat="dd/MM/yyyy"
+                          placeholderText="Select dates"
+                          className="w-full p-2 border rounded"
+                          calendarClassName="border rounded shadow-lg"
+                          showDisabledMonthNavigation
+                          ref={datePickerRef}
+                          isClearable={true}
+                        />
+                        {dateRange.startDate && dateRange.endDate && (
+                          <div className="absolute -bottom-6 left-0 text-sm text-gray-600">
+                            {calculateNights(dateRange.startDate, dateRange.endDate)} nights
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full md:w-auto bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors"
+                    >
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         {children}
         <div className="mt-auto">
           <footer className="bg-gray-50 border-t mt-20">
@@ -333,11 +318,11 @@ export default function RootLayout({
                 <div>
                   <h3 className="font-medium text-gray-900 mb-4">About Us</h3>
                   <p className="text-gray-600 text-sm">
-                    Helping pet owners find the perfect dog-friendly accommodations through 
+                    Helping pet owners find the perfect dog-friendly accommodations through
                     thoroughly researched and verified hotel listings.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="font-medium text-gray-900 mb-4">Quick Links</h3>
                   <ul className="space-y-2">
@@ -346,7 +331,7 @@ export default function RootLayout({
                     <li><a href="/contact" className="text-gray-600 text-sm hover:text-gray-900">Contact</a></li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h3 className="font-medium text-gray-900 mb-4">Contact</h3>
                   <ul className="space-y-2 text-sm text-gray-600">
@@ -355,7 +340,7 @@ export default function RootLayout({
                   </ul>
                 </div>
               </div>
-              
+
               <div className="border-t mt-8 pt-8 text-center text-sm text-gray-600">
                 <p>© {new Date().getFullYear()} Travel Tails. All rights reserved.</p>
               </div>
@@ -386,4 +371,4 @@ export default function RootLayout({
 
 
 
-{/*  */}
+{/*  */ }
