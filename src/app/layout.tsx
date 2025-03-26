@@ -33,6 +33,53 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import Script from "next/script";
 
+
+// Carousel component
+// First, create a new Carousel component
+const ImageCarousel = () => {
+  const images = [
+    '/carousel1.jpg',
+    '/image2.jpg',
+    '/image3.jpg',
+    // Add your image paths here
+  ];
+  
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => 
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 10000); // 10 seconds
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="absolute inset-0 w-full h-full overflow-hidden">
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out
+            ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+        >
+          <Image
+            src={image}
+            alt={`Slide ${index + 1}`}
+            fill
+            priority={index === 0}
+            className="object-cover"
+          />
+          {/* Add a dark overlay to make form content more visible */}
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -102,102 +149,77 @@ export default function RootLayout({
           strategy="beforeInteractive"
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
-        <div className="p-6 max-w-4xl mx-auto">
-          <div className="flex flex-col items-center text-center mb-8">  {/* reduced mb-12 to mb-8 */}
-            <Image
-              src="/ptt.jpg"
-              alt="Phoebe's Travel Tails"
-              width={120}
-              height={120}
-              priority
-            />
-            <h1 className="text-2xl font-medium tracking-tight mt-4 mb-2">  {/* changed from text-3xl to text-2xl and adjusted font-weight */}
-              Travel Tails
-            </h1>
-            <p className="text-gray-600 max-w-2xl text-sm leading-relaxed">  {/* added text-sm and leading-relaxed */}
-              Researched dog friendly hotels, we call each hotel periodically to determine just how dog-friendly each property is.
-            </p>
-          </div>
-
-          <form onSubmit={handleSearch} className="flex flex-wrap gap-4 items-end">
-            <div className="w-96">
-              <label className="block text-sm font-medium mb-1">Location</label>
-              <LocationPicker
-                value={location}
-                onChange={setLocation}
-                ref={locationInputRef}
-                onPlaceSelected={handlePlaceSelected}
+      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased min-h-screen flex flex-col`}>
+        <div className="relative min-h-[600px] bg-gray-100">
+          <ImageCarousel />
+          
+          {/* Content overlay */}
+          <div className="relative z-10 p-6 max-w-4xl mx-auto">
+            <div className="flex flex-col items-center text-center mb-8">
+              <Image
+                src="/ptt.png"
+                alt="Phoebe's Travel Tails"
+                width={320}
+                height={320}
+                priority
               />
+              <h1 className="text-2xl font-medium tracking-tight mt-4 mb-2 text-white">
+                Travel Tails
+              </h1>
+              <p className="text-gray-200 max-w-2xl text-sm leading-relaxed">
+                Researched dog friendly hotels, we call each hotel periodically to determine just how dog-friendly each property is.
+              </p>
             </div>
-            <div className="flex gap-4">
-              <div>
-                <label className="block text-sm font-medium mb-1">Dates</label>
-                <div className="relative">
-                <DatePicker
-                  selectsRange={true}
-                  startDate={dateRange.startDate}
-                  endDate={dateRange.endDate}
-                  onChange={(update) => {
-                    const [start, end] = update;
-                    
-                    // If selecting start date, only allow today or future dates
-                    if (start) {
-                      const today = new Date();
-                      today.setHours(0, 0, 0, 0);
-                      
-                      if (start < today) {
-                        return; // Don't allow past dates
-                      }
-                    }
 
-                    // If selecting end date, enforce minimum stay
-                    if (start && !end) {
-                      const minEndDate = new Date(start);
-                      minEndDate.setDate(minEndDate.getDate() + 1); // Minimum 1 night stay
-                      if (update[1] && update[1] < minEndDate) {
-                        return; // Don't allow selection of end date less than minimum
-                      }
-                    }
-
-                    setDateRange({
-                      startDate: start,
-                      endDate: end
-                    });
-                  }}
-                  minDate={new Date()} // This ensures no past dates can be selected
-                  monthsShown={2}
-                  dateFormat="dd/MM/yyyy"
-                  placeholderText="Select dates"
-                  className="w-full p-2 border rounded tt-datepicker"
-                  calendarClassName="border rounded shadow-lg"
-                  showDisabledMonthNavigation
-                  ref={(el) => {
-                    if (el) {
-                      datePickerRef.current = el;
-                    }
-                  }}
-                  isClearable={true} // Allows clearing the selection
-                />
-
-                  {dateRange.startDate && dateRange.endDate && (
-                    <div className="absolute -bottom-6 left-0 text-sm text-gray-600">
-                      {calculateNights(dateRange.startDate, dateRange.endDate)} nights
-                    </div>
-                  )}
-                </div>
-              </div>
+            {/* Search form with white background */}
+            <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+              <form onSubmit={handleSearch} className="flex flex-wrap gap-4 items-end">
+                {/* ... your existing form content ... */}
+              </form>
             </div>
-            <button
-              type="submit"
-              className="bg-blue-500 text-white p-2 rounded whitespace-nowrap"
-            >
-              Search
-            </button>
-          </form>
-
+          </div>
         </div>
         {children}
+
+
+        <div className="mt-auto">
+          <footer className="bg-gray-50 border-t mt-20">
+            <div className="max-w-4xl mx-auto px-6 py-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                  <h3 className="font-medium text-gray-900 mb-4">About Us</h3>
+                  <p className="text-gray-600 text-sm">
+                    Helping pet owners find the perfect dog-friendly accommodations through 
+                    thoroughly researched and verified hotel listings.
+                  </p>
+                </div>
+                
+                <div>
+                  <h3 className="font-medium text-gray-900 mb-4">Quick Links</h3>
+                  <ul className="space-y-2">
+                    <li><a href="/" className="text-gray-600 text-sm hover:text-gray-900">Home</a></li>
+                    <li><a href="/about" className="text-gray-600 text-sm hover:text-gray-900">About</a></li>
+                    <li><a href="/contact" className="text-gray-600 text-sm hover:text-gray-900">Contact</a></li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="font-medium text-gray-900 mb-4">Contact</h3>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>Email: info@TOBECONFIRMED.TBC</li>
+                    <li>Follow us on social media</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="border-t mt-8 pt-8 text-center text-sm text-gray-600">
+                <p>© {new Date().getFullYear()} Travel Tails. All rights reserved.</p>
+              </div>
+            </div>
+          </footer>
+        </div>
+
+
       </body>
     </html>
   );
