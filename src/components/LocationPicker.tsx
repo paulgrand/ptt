@@ -45,6 +45,7 @@ const LocationPicker = forwardRef(({ value, onChange, onPlaceSelected }, forward
       value={value?.formattedAddress || ""}
       onChange={(e) => onChange({ ...value, formattedAddress: e.target.value })}
       className="w-full p-2 border rounded"
+      style={{ minHeight: '40px' }} // Ensure good tap target size
     />
   );
 });

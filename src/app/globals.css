@@ -57,3 +57,31 @@ body {
 .tt-datepicker {
   min-width: 250px;
 }
+
+/* Add to your globals.css */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  min-height: 40px;
+}
+
+/* Improve mobile calendar styling */
+@media (max-width: 768px) {
+  .react-datepicker {
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .react-datepicker__month-container {
+    width: 100%;
+  }
+  
+  .react-datepicker__day {
+    width: 2rem;
+    line-height: 2rem;
+    margin: 0.2rem;
+  }
+}
