@@ -228,10 +228,10 @@ export default function RootLayout({
           {/* Centered form container */}
           <div className="absolute inset-0 z-10 flex items-center justify-center p-6">
             <div className="w-full max-w-4xl">
-              <div className="bg-white/95 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+              <div className="bg-white/45 backdrop-blur-sm rounded-lg p-6 shadow-lg">
                 <form onSubmit={handleSearch} className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:gap-4 md:items-end">
                   <div className="flex-1 min-w-[200px]">
-                    <label className="block text-sm font-medium mb-1">Location</label>
+                    <label style={{color: '#222222'}} className="block text-md font-medium mb-2">Location</label>
                     <LocationPicker
                       value={location}
                       onChange={setLocation}
@@ -241,7 +241,7 @@ export default function RootLayout({
                   </div>
                   
                   <div className="flex-1 min-w-[200px]">
-                    <label className="block text-sm font-medium mb-1">Dates</label>
+                    <label style={{color: "#222222"}} className="block text-md font-large mb-2">Dates</label>
                     <div className="relative">
                       <DatePicker
                         selectsRange={true}
