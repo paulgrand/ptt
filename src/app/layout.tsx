@@ -204,7 +204,7 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased min-h-screen flex flex-col`}>
         {/* Logo section outside the carousel */}
-        <div className="relative z-10 pt-6 pb-4 flex flex-col items-center">
+        {/* <div className="relative z-10 pt-6 pb-4 flex flex-col items-center">
           <Image
             src="/ptt.png"
             alt="Phoebe's Travel Tails"
@@ -218,19 +218,40 @@ export default function RootLayout({
           <p className="text-gray-600 max-w-2xl mx-auto text-sm leading-relaxed text-center">
             Researched and verified dog friendly hotels.
           </p>
-        </div>
+        </div> */}
 
         {/* Carousel section with centered form */}
-        <div className="relative h-[500px]"> {/* Adjust height as needed */}
-          
-          <ImageCarousel />
+        <div className="relative h-[800px]"> {/* Increased height */}
+  {/* Carousel as background */}
+  <ImageCarousel />
 
-          {/* Centered form container */}
-          <div className="absolute inset-0 z-10 flex items-center justify-center p-6">
-            <div className="w-full max-w-4xl">
-              <div className="bg-white/45 backdrop-blur-sm rounded-lg p-6 shadow-lg">
-                <form onSubmit={handleSearch} className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:gap-4 md:items-end">
-                  <div className="flex-1 min-w-[200px]">
+  {/* Overlaid content */}
+  <div className="relative z-10 h-full flex flex-col items-center">
+    {/* Logo section */}
+    <div className="pt-6 pb-4">
+      <div className="p-6 flex flex-col items-center">
+        <Image
+          src="/ptt.png"
+          alt="Phoebe's Travel Tails"
+          width={200}
+          height={200}
+          priority
+        />
+        {/* <h1 className="text-2xl font-medium tracking-tight mt-4 mb-2 text-center">
+          Travel Tails
+        </h1> */}
+        <p className="text-gray-100 max-w-2xl mx-auto text-md leading-relaxed text-center">
+          Researched and verified dog friendly hotels.
+        </p>
+      </div>
+    </div>
+
+    {/* Form section */}
+    <div className="flex items-center justify-center p-6">
+      <div className="w-full max-w-4xl">
+        <div className="bg-white/35 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+          <form onSubmit={handleSearch} className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:gap-4 md:items-end">
+                  <div className="flex-1 min-w-[300px]">
                     <label style={{color: '#222222'}} className="block text-md font-medium mb-2">Location</label>
                     <LocationPicker
                       value={location}
@@ -299,10 +320,11 @@ export default function RootLayout({
                     Search
                   </button>
                 </form>
-              </div>
-            </div>
-          </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
         {children}
         <div className="mt-auto">
           <footer className="bg-gray-50 border-t mt-20">
@@ -344,3 +366,24 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/*  */}
