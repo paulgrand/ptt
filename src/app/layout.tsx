@@ -45,7 +45,7 @@ const ImageCarousel = () => {
     },
     {
       src: '/carousel3.jpg',
-      position: 'center center' // Default center positioning
+      position: 'center bottom' // Default center positioning
     },
     {
       src: '/carousel4.jpg',
@@ -53,7 +53,7 @@ const ImageCarousel = () => {
     },
     {
       src: '/carousel5.jpg',
-      position: 'center center' // Default center positioning
+      position: 'center right' // Default center positioning
     },
     {
       src: '/carousel6.jpg',
@@ -73,7 +73,7 @@ const ImageCarousel = () => {
     },
     {
       src: '/carousel10.jpg',
-      position: 'center center' // Default center positioning
+      position: 'center 80%' // Default center positioning
     },
   ];
 
@@ -205,14 +205,14 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased min-h-screen flex flex-col`}>
         {/* Logo section outside the carousel */}
         {/* Logo section */}
-        <div className="pt-4 pb-4 flex justify-center w-full"> {/* Added flex justify-center and w-full */}
-          <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 shadow-xl max-w-4xl w-full mx-auto"> {/* Added max-w-4xl and mx-auto */}
+        <div className="pt-4 pb-4 flex justify-center w-full">
+          <div className="bg-white/20 pl-20 backdrop-blur-sm rounded-xl p-2 shadow-xl max-w-4xl w-full mx-auto"> {/* Added max-w-4xl and mx-auto */}
             <div className="flex items-center gap-6">
               <Image
                 src="/ptt.png"
                 alt="Phoebe's Travel Tails"
-                width={200}
-                height={200}
+                width={180}
+                height={180}
                 priority
               />
               <div className="flex flex-col justify-center">
@@ -300,7 +300,7 @@ export default function RootLayout({
 
                     <button
                       type="submit"
-                      className="w-full md:w-auto bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors"
+                      className="w-full md:w-auto bg-yellow-600 text-white px-6 py-2 rounded hover:bg-yellow-800 transition-colors"
                     >
                       Search
                     </button>
@@ -328,7 +328,9 @@ export default function RootLayout({
                   <ul className="space-y-2">
                     <li><a href="/" className="text-gray-600 text-sm hover:text-gray-900">Home</a></li>
                     <li><a href="/about" className="text-gray-600 text-sm hover:text-gray-900">About</a></li>
-                    <li><a href="/contact" className="text-gray-600 text-sm hover:text-gray-900">Contact</a></li>
+                    <li><a href="/terms-and-conditions" className="text-gray-600 text-sm hover:text-gray-900">Terms and Conditions</a></li>
+                    <li><a href="/privacy-policy" className="text-gray-600 text-sm hover:text-gray-900">Privacy Policy</a></li>
+                    <li><a href="/cookie-policy" className="text-gray-600 text-sm hover:text-gray-900">Cookie Policy</a></li>
                   </ul>
                 </div>
 

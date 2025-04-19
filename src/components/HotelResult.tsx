@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from 'react';
 import { FaPaw, FaBuilding, FaChevronDown, FaChevronUp, FaCreditCard, FaDog, FaCheck, FaTimes, FaMapMarkerAlt } from 'react-icons/fa';
 import MapModal from './MapModal';
 import Image from 'next/image';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { loadGoogleMapsScript, isGoogleMapsLoaded } from '@/utils/googleMaps';
 
 
 
@@ -65,6 +67,30 @@ export default function HotelResult({ result, location, isDogFriendly, dogFriend
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [shouldLoad, setShouldLoad] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // Add this function to handle the booking navigation
+  const handleBookNow = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent event bubbling if needed
+    
+    // Get the current URL path segments
+    const pathSegments = window.location.pathname.split('/');
+    
+    // Construct the booking URL with the necessary parameters to reconstruct the results URL later
+    const bookingUrl = new URL('/booking', window.location.origin);
+    
+    // Add all the parameters we need to reconstruct the results URL
+    bookingUrl.searchParams.set('location', pathSegments[2] || '');
+    bookingUrl.searchParams.set('startDate', pathSegments[3] || '');
+    bookingUrl.searchParams.set('endDate', pathSegments[4] || '');
+    bookingUrl.searchParams.set('lat', pathSegments[5] || '');
+    bookingUrl.searchParams.set('lng', pathSegments[6] || '');
+    bookingUrl.searchParams.set('hotelId', result.hotelId);
+
+    router.push(bookingUrl.toString());
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -132,12 +158,6 @@ export default function HotelResult({ result, location, isDogFriendly, dogFriend
 
     fetchHotelImage();
   }, [result.name, location, shouldLoad]);
-  // useEffect(() => {
-  //   console.log('imageUrl updated:', imageUrl);
-  // }, [imageUrl]);
-
-  //   fetchHotelImage();
-  // }, [result.hotelId]);
 
   function formatHotelName(name: string): string {
     // First convert to lowercase
@@ -304,6 +324,9 @@ export default function HotelResult({ result, location, isDogFriendly, dogFriend
     </div>
   );
 
+
+
+
   return (
     <div ref={containerRef} style={{backgroundColor: '#fff'}} className="flex flex-col">
       <li 
@@ -421,11 +444,9 @@ export default function HotelResult({ result, location, isDogFriendly, dogFriend
                 </div>
                 <div className="mt-4">
                   <button 
-                    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors w-full"
+                    className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-800 transition-colors w-full"
                     onClick={(e) => {
-                      e.stopPropagation();
-                      // Add your booking logic here
-                      console.log('Booking offer:', offer);
+                      router.push(`/booking?hotelId=${result.hotelId}`)
                     }}
                   >
                     Book Now
